@@ -4,7 +4,10 @@ import MapKit
 struct TripDetailView: View {
     let trip: Trip
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var tripStore: TripStore
     @State private var region: MKCoordinateRegion = MKCoordinateRegion()
+    @State private var showingDiary = false
+    @State private var showingPrivacy = false
 
     var body: some View {
         NavigationStack {
@@ -18,8 +21,36 @@ struct TripDetailView: View {
                     // Stats row
                     TripStatsRow(trip: trip)
 
+                    // Action buttons
+                    HStack(spacing: 12) {
+                        ActionButton(icon: "book.fill", label: "Diary") {
+                            showingDiary = true
+                        }
+
+                        ActionButton(icon: trip.isPrivate ? "lock.fill" : "globe", label: trip.isPrivate ? "Private" : "Public") {
+                            showingPrivacy = true
+                        }
+
+                        ActionButton(icon: "arrow.left.arrow.right", label: "Compare") {
+                            // handled by TripComparisonEntryView
+                        }
+                    }
+
+                    // Trip comparison entry
+                    TripComparisonEntryView(trip: trip)
+
                     // Cities list
                     CitiesListView(visits: trip.visits)
+
+                    // Trip notes
+                    if !trip.notes.isEmpty {
+                        TripNotesView(notes: trip.notes)
+                    }
+
+                    // Template info
+                    if let templateName = trip.templateName {
+                        TemplateSourceBadge(name: templateName)
+                    }
                 }
                 .padding(16)
             }
@@ -36,6 +67,12 @@ struct TripDetailView: View {
             }
             .onAppear {
                 fitMapToVisits()
+            }
+            .sheet(isPresented: $showingDiary) {
+                TripDiaryView(trip: trip)
+            }
+            .sheet(isPresented: $showingPrivacy) {
+                TripPrivacyView(trip: trip)
             }
         }
     }
@@ -67,6 +104,74 @@ struct TripDetailView: View {
             center: CLLocationCoordinate2D(latitude: centerLat, longitude: centerLon),
             span: MKCoordinateSpan(latitudeDelta: max(spanLat, 0.5), longitudeDelta: max(spanLon, 0.5))
         )
+    }
+}
+
+struct ActionButton: View {
+    let icon: String
+    let label: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 16))
+                Text(label)
+                    .font(.system(size: 11))
+            }
+            .foregroundColor(Theme.textSecondary)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(Theme.surface)
+            .cornerRadius(10)
+        }
+    }
+}
+
+struct TripNotesView: View {
+    let notes: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Image(systemName: "note.text")
+                    .font(.system(size: 13))
+                    .foregroundColor(Theme.textSecondary)
+                Text("Trip Notes")
+                    .font(.system(size: 13))
+                    .foregroundColor(Theme.textSecondary)
+                    .textCase(.uppercase)
+                    .tracking(0.5)
+                Spacer()
+            }
+
+            Text(notes)
+                .font(.system(size: 14))
+                .foregroundColor(Theme.textPrimary)
+                .lineSpacing(4)
+        }
+        .padding(14)
+        .background(Theme.surface)
+        .cornerRadius(12)
+    }
+}
+
+struct TemplateSourceBadge: View {
+    let name: String
+
+    var body: some View {
+        HStack(spacing: 6) {
+            Image(systemName: "doc.on.doc.fill")
+                .font(.system(size: 11))
+            Text("Created from \"\(name)\"")
+                .font(.system(size: 12))
+        }
+        .foregroundColor(Theme.sage)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 6)
+        .background(Theme.sage.opacity(0.1))
+        .cornerRadius(8)
     }
 }
 

@@ -8,9 +8,14 @@ struct SampleTrips {
         startDate: Calendar.current.date(byAdding: .day, value: -9, to: Date())!,
         endDate: Calendar.current.date(byAdding: .day, value: -2, to: Date())!,
         isActive: false,
+        isPrivate: false,
+        notes: "An incredible mix of ancient tradition and cutting-edge future. The food alone is worth the trip.",
+        templateId: nil,
+        templateName: nil,
+        transportMode: "flight",
         visits: [
-            Visit(id: -1, tripId: -1, city: "Tokyo", country: "Japan", latitude: 35.6762, longitude: 139.6503, arrivalDate: Calendar.current.date(byAdding: .day, value: -9, to: Date())!, departureDate: Calendar.current.date(byAdding: .day, value: -4, to: Date())!, order: 0),
-            Visit(id: -2, tripId: -1, city: "Kyoto", country: "Japan", latitude: 35.0116, longitude: 135.7681, arrivalDate: Calendar.current.date(byAdding: .day, value: -4, to: Date())!, departureDate: Calendar.current.date(byAdding: .day, value: -2, to: Date())!, order: 1)
+            Visit(id: -1, tripId: -1, city: "Tokyo", country: "Japan", latitude: 35.6762, longitude: 139.6503, arrivalDate: Calendar.current.date(byAdding: .day, value: -9, to: Date())!, departureDate: Calendar.current.date(byAdding: .day, value: -4, to: Date())!, order: 0, notes: "Shibuya crossing at night. Sensory overload in the best way."),
+            Visit(id: -2, tripId: -1, city: "Kyoto", country: "Japan", latitude: 35.0116, longitude: 135.7681, arrivalDate: Calendar.current.date(byAdding: .day, value: -4, to: Date())!, departureDate: Calendar.current.date(byAdding: .day, value: -2, to: Date())!, order: 1, notes: "Fushimi Inari at dawn. The torii gates go on forever.")
         ]
     )
 
@@ -20,8 +25,13 @@ struct SampleTrips {
         startDate: Calendar.current.date(byAdding: .day, value: -30, to: Date())!,
         endDate: Calendar.current.date(byAdding: .day, value: -27, to: Date())!,
         isActive: false,
+        isPrivate: false,
+        notes: "A weekend that reminded us why Paris never gets old.",
+        templateId: nil,
+        templateName: nil,
+        transportMode: "train",
         visits: [
-            Visit(id: -3, tripId: -2, city: "Paris", country: "France", latitude: 48.8566, longitude: 2.3522, arrivalDate: Calendar.current.date(byAdding: .day, value: -30, to: Date())!, departureDate: Calendar.current.date(byAdding: .day, value: -27, to: Date())!, order: 0)
+            Visit(id: -3, tripId: -2, city: "Paris", country: "France", latitude: 48.8566, longitude: 2.3522, arrivalDate: Calendar.current.date(byAdding: .day, value: -30, to: Date())!, departureDate: Calendar.current.date(byAdding: .day, value: -27, to: Date())!, order: 0, notes: "Croissants every morning. No regrets.")
         ]
     )
 
@@ -31,8 +41,13 @@ struct SampleTrips {
         startDate: Calendar.current.date(byAdding: .month, value: -2, to: Date())!,
         endDate: Calendar.current.date(byAdding: .month, value: -2, to: Date())!.addingTimeInterval(86400 * 5),
         isActive: false,
+        isPrivate: false,
+        notes: "Pastéis de nata on every corner. Trams rattling up impossible hills.",
+        templateId: nil,
+        templateName: nil,
+        transportMode: "flight",
         visits: [
-            Visit(id: -4, tripId: -3, city: "Lisbon", country: "Portugal", latitude: 38.7223, longitude: -9.1393, arrivalDate: Calendar.current.date(byAdding: .month, value: -2, to: Date())!, departureDate: nil, order: 0)
+            Visit(id: -4, tripId: -3, city: "Lisbon", country: "Portugal", latitude: 38.7223, longitude: -9.1393, arrivalDate: Calendar.current.date(byAdding: .month, value: -2, to: Date())!, departureDate: nil, order: 0, notes: "Alfama at golden hour. Perfection.")
         ]
     )
 

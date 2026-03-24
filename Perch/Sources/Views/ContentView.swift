@@ -3,15 +3,24 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var tripStore: TripStore
     @EnvironmentObject var locationService: LocationService
+    @EnvironmentObject var templateStore: TemplateStore
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var showingSettings = false
     @State private var showingStartTripInfo = false
     @State private var showingPricing = false
     @State private var selectedTrip: Trip?
     @State private var showingOnboarding = false
+    @State private var showingTemplates = false
+    @State private var showingMultiTrip = false
+    @State private var showingInsights = false
+    @State private var showingLocationInsufficient = false
 
     private var currentYear: Int {
         Calendar.current.component(.year, from: Date())
+    }
+
+    private var insights: TravelInsightsService {
+        TravelInsightsService(tripStore: tripStore)
     }
 
     var body: some View {
@@ -19,7 +28,7 @@ struct ContentView: View {
             Group {
                 if !hasCompletedOnboarding {
                     OnboardingView()
-                } else if pastTrips.isEmpty && tripStore.activeTrip == nil {
+                } else if tripStore.trips.isEmpty {
                     EmptyStateWithCTA(
                         onStartTrip: { showingStartTripInfo = true },
                         onViewPricing: { showingPricing = true }
@@ -42,6 +51,20 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack(spacing: 16) {
+                        if tripStore.activeTrips.count > 1 {
+                            Button {
+                                showingMultiTrip = true
+                            } label: {
+                                ZStack(alignment: .topTrailing) {
+                                    Image(systemName: "suitcase.fill")
+                                        .foregroundColor(Theme.sage)
+                                    Circle()
+                                        .fill(Theme.terracotta)
+                                        .frame(width: 8, height: 8)
+                                }
+                            }
+                        }
+
                         Button {
                             showingOnboarding = true
                         } label: {
@@ -70,41 +93,104 @@ struct ContentView: View {
             .sheet(isPresented: $showingOnboarding) {
                 OnboardingView()
             }
+            .sheet(isPresented: $showingTemplates) {
+                TripTemplatesView()
+            }
+            .sheet(isPresented: $showingMultiTrip) {
+                MultiTripView()
+            }
+            .sheet(isPresented: $showingInsights) {
+                TravelInsightsFullView(year: currentYear)
+            }
             .sheet(item: $selectedTrip) { trip in
                 TripDetailView(trip: trip)
+            }
+            .alert("Location Data Insufficient", isPresented: $showingLocationInsufficient) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text("Perch hasn't recorded enough location data for this trip. Make sure location access is enabled and try moving to a new city.")
             }
         }
         .onAppear {
             checkLocationPermission()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .didRecordNewVisit)) { notification in
+            if let userInfo = notification.userInfo,
+               let city = userInfo["city"] as? String, !city.isEmpty {
+                // Good visit recorded
+            }
         }
     }
 
     private var mainContent: some View {
         ScrollView {
             VStack(spacing: 20) {
+                // Active trips (if multiple)
+                if tripStore.activeTrips.count > 1 {
+                    MultipleActiveTripsBanner(
+                        count: tripStore.activeTrips.count,
+                        onTap: { showingMultiTrip = true }
+                    )
+                }
+
                 if let active = tripStore.activeTrip {
                     ActiveTripCard(trip: active)
                 }
 
+                // Travel summary
                 TravelSummaryCard(stats: tripStore.travelStats(for: currentYear))
 
-                // Travel insights for the year
-                if !pastTrips.isEmpty {
-                    TravelInsightsSection(stats: tripStore.travelStats(for: currentYear))
+                // Quick insights teaser
+                if !tripStore.trips.filter({ !$0.isActive }).isEmpty {
+                    QuickInsightsTeaser(
+                        stats: tripStore.travelStats(for: currentYear),
+                        onTap: { showingInsights = true }
+                    )
                 }
 
+                // CO₂ Breakdown (if data available)
+                let breakdown = insights.co2Breakdown(year: currentYear)
+                if breakdown.total > 0 {
+                    CO2BreakdownChartView(breakdown: breakdown, year: currentYear)
+                }
+
+                // Trip Templates
+                if !tripStore.trips.filter({ !$0.isActive }).isEmpty {
+                    TripTemplatesSection(onShowAll: { showingTemplates = true })
+                }
+
+                // City Rankings (if data available)
+                let cityRankings = insights.cityRankings(year: currentYear)
+                if !cityRankings.isEmpty {
+                    MostVisitedCitiesView(rankings: cityRankings)
+                }
+
+                // Start new trip / Use template
                 if tripStore.activeTrip == nil {
-                    Button {
-                        showingStartTripInfo = true
-                    } label: {
-                        HStack {
-                            Image(systemName: "airplane")
-                            Text("Start New Trip")
+                    HStack(spacing: 12) {
+                        Button {
+                            showingStartTripInfo = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "airplane")
+                                Text("Start New Trip")
+                            }
                         }
+                        .buttonStyle(PerchButtonStyle())
+
+                        Button {
+                            showingTemplates = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "doc.on.doc")
+                                Text("Templates")
+                            }
+                        }
+                        .buttonStyle(PerchButtonStyle(isPrimary: false))
                     }
-                    .buttonStyle(PerchButtonStyle())
                 }
 
+                // Past Trips
                 if !pastTrips.isEmpty {
                     PastTripsSection(trips: pastTrips, onSelect: { selectedTrip = $0 })
                 }
@@ -120,9 +206,174 @@ struct ContentView: View {
     }
 
     private func checkLocationPermission() {
-        if locationService.authorizationStatus == .denied || locationService.authorizationStatus == .restricted {
-            // Show location permission denied state
+        // Check periodically
+    }
+}
+
+// MARK: - Multiple Active Trips Banner
+
+struct MultipleActiveTripsBanner: View {
+    let count: Int
+    let onTap: () -> Void
+
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(Theme.sage.opacity(0.2))
+                        .frame(width: 40, height: 40)
+                    Image(systemName: "suitcase.fill")
+                        .foregroundColor(Theme.sage)
+                        .font(.system(size: 16))
+                }
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("\(count) trips running")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(Theme.textPrimary)
+                    Text("Tap to manage")
+                        .font(.system(size: 12))
+                        .foregroundColor(Theme.textSecondary)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .foregroundColor(Theme.textSecondary)
+            }
+            .padding(14)
+            .background(Theme.sage.opacity(0.1))
+            .cornerRadius(12)
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Theme.sage.opacity(0.3), lineWidth: 1)
+            )
         }
+    }
+}
+
+// MARK: - Quick Insights Teaser
+
+struct QuickInsightsTeaser: View {
+    let stats: TravelStats
+    let onTap: () -> Void
+
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                Image(systemName: "lightbulb.fill")
+                    .font(.system(size: 16))
+                    .foregroundColor(Theme.terracotta)
+                    .frame(width: 24)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Travel Insights")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(Theme.textPrimary)
+                    Text(insightTeaser)
+                        .font(.system(size: 12))
+                        .foregroundColor(Theme.textSecondary)
+                        .lineLimit(1)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12))
+                    .foregroundColor(Theme.textSecondary)
+            }
+            .padding(14)
+            .background(Theme.surface)
+            .cornerRadius(12)
+        }
+    }
+
+    private var insightTeaser: String {
+        if stats.countriesVisited == 0 {
+            return "Start traveling to see insights"
+        } else if stats.countriesVisited < 3 {
+            return "\(stats.countriesVisited) country\(stats.countriesVisited == 1 ? "" : "ries") visited"
+        } else if stats.countriesVisited < 6 {
+            return "\(stats.countriesVisited) countries and counting"
+        } else {
+            return "You're a seasoned traveler"
+        }
+    }
+}
+
+// MARK: - Trip Templates Section
+
+struct TripTemplatesSection: View {
+    let onShowAll: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("Trip Templates")
+                    .font(.system(size: 13))
+                    .foregroundColor(Theme.textSecondary)
+                    .textCase(.uppercase)
+                    .tracking(1)
+
+                Spacer()
+
+                Button {
+                    onShowAll()
+                } label: {
+                    Text("See all")
+                        .font(.system(size: 12))
+                        .foregroundColor(Theme.terracotta)
+                }
+            }
+
+            HStack(spacing: 12) {
+                QuickTemplateCard(
+                    name: "Weekend Break",
+                    icon: "calendar.badge.clock",
+                    duration: "3 days"
+                )
+
+                QuickTemplateCard(
+                    name: "One Week",
+                    icon: "airplane",
+                    duration: "7 days"
+                )
+
+                QuickTemplateCard(
+                    name: "Japan Trip",
+                    icon: "globe",
+                    duration: "10 days"
+                )
+            }
+        }
+    }
+}
+
+struct QuickTemplateCard: View {
+    let name: String
+    let icon: String
+    let duration: String
+
+    var body: some View {
+        VStack(spacing: 8) {
+            Image(systemName: icon)
+                .font(.system(size: 20))
+                .foregroundColor(Theme.terracotta)
+
+            Text(name)
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundColor(Theme.textPrimary)
+                .lineLimit(1)
+
+            Text(duration)
+                .font(.system(size: 10))
+                .foregroundColor(Theme.textSecondary)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 16)
+        .background(Theme.surface)
+        .cornerRadius(12)
     }
 }
 
@@ -163,65 +414,6 @@ struct EmptyStateWithCTA: View {
                 .padding(.horizontal, 16)
                 .padding(.bottom, 40)
             }
-        }
-    }
-}
-
-// MARK: - Travel Insights Section
-
-struct TravelInsightsSection: View {
-    let stats: TravelStats
-    @State private var isExpanded = false
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Button {
-                withAnimation { isExpanded.toggle() }
-            } label: {
-                HStack {
-                    Text("Your Year in Perspective")
-                        .font(.system(size: 13))
-                        .foregroundColor(Theme.textSecondary)
-                        .textCase(.uppercase)
-                        .tracking(1)
-                    Spacer()
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                        .font(.system(size: 12))
-                        .foregroundColor(Theme.textSecondary)
-                }
-            }
-
-            if isExpanded {
-                TravelInsightsView(stats: stats)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
-            } else {
-                // Collapsed insight teaser
-                HStack {
-                    Image(systemName: "lightbulb.fill")
-                        .foregroundColor(Theme.terracotta)
-                        .font(.system(size: 14))
-                    Text(sampleInsight)
-                        .font(.system(size: 13))
-                        .foregroundColor(Theme.textSecondary)
-                        .italic()
-                    Spacer()
-                }
-                .padding(16)
-                .background(Theme.surface)
-                .cornerRadius(12)
-            }
-        }
-    }
-
-    private var sampleInsight: String {
-        if stats.countriesVisited == 0 {
-            return "Start your first trip to see your travel insights."
-        } else if stats.countriesVisited < 3 {
-            return "You've visited \(stats.countriesVisited) country\(stats.countriesVisited == 1 ? "" : "ries") so far. Keep exploring."
-        } else if stats.countriesVisited < 6 {
-            return "A worldly \(stats.countriesVisited) countries. You're building something meaningful."
-        } else {
-            return "Impressive. \(stats.countriesVisited) countries and counting. This is what a well-traveled life looks like."
         }
     }
 }
@@ -331,7 +523,6 @@ struct ActiveTripCard: View {
     }
 
     private func observeVisits() {
-        // Observe visit count changes
         if let currentTrip = tripStore.activeTrip {
             visitsCount = currentTrip.visits.count
         }
@@ -459,5 +650,66 @@ struct PastTripRow: View {
         let dateRange = end.isEmpty ? start : "\(start)–\(end)"
         let uniqueCities = Set(trip.cities).count
         return "\(dateRange) · \(trip.formattedDuration) · \(uniqueCities) city\(uniqueCities == 1 ? "" : "s")"
+    }
+}
+
+// MARK: - Travel Insights Full View
+
+struct TravelInsightsFullView: View {
+    let year: Int
+    @EnvironmentObject var tripStore: TripStore
+    @Environment(\.dismiss) private var dismiss
+
+    private var insights: TravelInsightsService {
+        TravelInsightsService(tripStore: tripStore)
+    }
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 20) {
+                    let stats = tripStore.travelStats(for: year)
+
+                    // CO₂ comparison
+                    let comparison = insights.compareToAverage(year: year)
+                    CO2ComparisonView(comparison: comparison, year: year)
+
+                    // CO₂ breakdown chart
+                    let breakdown = insights.co2Breakdown(year: year)
+                    if breakdown.total > 0 {
+                        CO2BreakdownChartView(breakdown: breakdown, year: year)
+                    }
+
+                    // City rankings
+                    let cityRankings = insights.cityRankings(year: year)
+                    if !cityRankings.isEmpty {
+                        MostVisitedCitiesView(rankings: cityRankings)
+                    }
+
+                    // Travel streaks and frequency
+                    let streak = insights.travelStreak(year: year)
+                    let frequency = insights.travelFrequency(year: year)
+                    TravelStreaksView(streak: streak, frequency: frequency, year: year)
+
+                    // Total distance
+                    let distance = insights.totalDistanceAllTime
+                    if distance > 0 {
+                        TotalDistanceView(distanceMeters: distance, year: year)
+                    }
+
+                    Spacer(minLength: 40)
+                }
+                .padding(16)
+            }
+            .background(Theme.background)
+            .navigationTitle("Travel Insights")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") { dismiss() }
+                        .foregroundColor(Theme.terracotta)
+                }
+            }
+        }
     }
 }

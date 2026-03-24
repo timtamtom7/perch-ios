@@ -7,11 +7,20 @@ struct Trip: Identifiable, Equatable {
     var startDate: Date
     var endDate: Date?
     var isActive: Bool
+    var isPrivate: Bool
+    var notes: String
+    var templateId: Int64?
+    var templateName: String?
+    var transportMode: String
     var visits: [Visit]
 
     var duration: TimeInterval {
         let end = endDate ?? Date()
         return end.timeIntervalSince(startDate)
+    }
+
+    var durationDays: Int {
+        Int(duration / 86400)
     }
 
     var formattedDuration: String {
@@ -34,10 +43,21 @@ struct Trip: Identifiable, Equatable {
         return total
     }
 
+    var totalDistanceKm: Double {
+        totalDistance / 1000
+    }
+
     var co2Estimate: Double {
-        // Average CO₂ per km for air travel ≈ 0.255 kg/km
-        let km = totalDistance / 1000
-        return km * 0.255
+        CO2Estimator.estimate(distanceKm: totalDistanceKm, mode: transportModeEnum)
+    }
+
+    private var transportModeEnum: CO2Estimator.TransportMode {
+        switch transportMode {
+        case "car": return .car
+        case "train": return .train
+        case "bus": return .bus
+        default: return .flight
+        }
     }
 
     var countries: Set<String> {
@@ -63,6 +83,7 @@ struct Visit: Identifiable, Equatable {
     var arrivalDate: Date
     var departureDate: Date?
     var order: Int
+    var notes: String
 
     var location: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

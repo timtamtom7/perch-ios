@@ -12,6 +12,11 @@ final class TripStore: ObservableObject {
     private let tripStartDate = Expression<Date>("start_date")
     private let tripEndDate = Expression<Date?>("end_date")
     private let tripIsActive = Expression<Bool>("is_active")
+    private let tripIsPrivate = Expression<Bool>("is_private")
+    private let tripNotes = Expression<String>("notes")
+    private let tripTemplateId = Expression<Int64?>("template_id")
+    private let tripTemplateName = Expression<String?>("template_name")
+    private let tripTransportMode = Expression<String>("transport_mode")
 
     // Visit columns
     private let visitId = Expression<Int64>("id")
@@ -23,6 +28,7 @@ final class TripStore: ObservableObject {
     private let visitArrivalDate = Expression<Date>("arrival_date")
     private let visitDepartureDate = Expression<Date?>("departure_date")
     private let visitOrder = Expression<Int>("visit_order")
+    private let visitNotes = Expression<String>("notes")
 
     @Published var trips: [Trip] = []
     @Published var activeTrip: Trip?
@@ -49,6 +55,11 @@ final class TripStore: ObservableObject {
             t.column(tripStartDate)
             t.column(tripEndDate)
             t.column(tripIsActive)
+            t.column(tripIsPrivate, defaultValue: false)
+            t.column(tripNotes, defaultValue: "")
+            t.column(tripTemplateId)
+            t.column(tripTemplateName)
+            t.column(tripTransportMode, defaultValue: "flight")
         })
 
         try db?.run(visitsTable.create(ifNotExists: true) { t in
@@ -61,6 +72,7 @@ final class TripStore: ObservableObject {
             t.column(visitArrivalDate)
             t.column(visitDepartureDate)
             t.column(visitOrder)
+            t.column(visitNotes, defaultValue: "")
         })
     }
 
@@ -77,6 +89,11 @@ final class TripStore: ObservableObject {
                     startDate: row[tripStartDate],
                     endDate: row[tripEndDate],
                     isActive: row[tripIsActive],
+                    isPrivate: row[tripIsPrivate],
+                    notes: row[tripNotes],
+                    templateId: row[tripTemplateId],
+                    templateName: row[tripTemplateName],
+                    transportMode: row[tripTransportMode],
                     visits: visits
                 )
                 loadedTrips.append(trip)
@@ -105,7 +122,8 @@ final class TripStore: ObservableObject {
                     longitude: row[visitLongitude],
                     arrivalDate: row[visitArrivalDate],
                     departureDate: row[visitDepartureDate],
-                    order: row[visitOrder]
+                    order: row[visitOrder],
+                    notes: row[visitNotes]
                 )
                 visits.append(visit)
             }
@@ -116,22 +134,36 @@ final class TripStore: ObservableObject {
     }
 
     @discardableResult
-    func startTrip() -> Trip? {
+    func startTrip(name: String? = nil, templateId: Int64? = nil, templateName: String? = nil, transportMode: String = "flight") -> Trip? {
         guard let db = db else { return nil }
-        // End any currently active trip first
-        if activeTrip != nil {
-            _ = endTrip()
-        }
+        // Allow multiple active trips (multi-trip management)
         do {
-            let name = "Trip \(trips.count + 1)"
+            let theTripName = name ?? "Trip \(trips.count + 1)"
             let insert = tripsTable.insert(
-                tripName <- name,
+                tripName <- theTripName,
                 tripStartDate <- Date(),
                 tripEndDate <- nil,
-                tripIsActive <- true
+                tripIsActive <- true,
+                tripIsPrivate <- false,
+                tripNotes <- "",
+                tripTemplateId <- templateId,
+                tripTemplateName <- templateName,
+                tripTransportMode <- transportMode
             )
             let newId = try db.run(insert)
-            let trip = Trip(id: newId, name: name, startDate: Date(), endDate: nil, isActive: true, visits: [])
+            let trip = Trip(
+                id: newId,
+                name: theTripName,
+                startDate: Date(),
+                endDate: nil,
+                isActive: true,
+                isPrivate: false,
+                notes: "",
+                templateId: templateId,
+                templateName: templateName,
+                transportMode: transportMode,
+                visits: []
+            )
             trips.insert(trip, at: 0)
             activeTrip = trip
             return trip
@@ -180,7 +212,8 @@ final class TripStore: ObservableObject {
                 visitLongitude <- longitude,
                 visitArrivalDate <- Date(),
                 visitDepartureDate <- nil,
-                visitOrder <- maxOrder + 1
+                visitOrder <- maxOrder + 1,
+                visitNotes <- ""
             )
             let newId = try db.run(insert)
             let visit = Visit(
@@ -192,7 +225,8 @@ final class TripStore: ObservableObject {
                 longitude: longitude,
                 arrivalDate: Date(),
                 departureDate: nil,
-                order: maxOrder + 1
+                order: maxOrder + 1,
+                notes: ""
             )
             if var active = activeTrip {
                 active.visits.append(visit)
@@ -205,6 +239,55 @@ final class TripStore: ObservableObject {
         } catch {
             print("Add visit error: \(error)")
             return nil
+        }
+    }
+
+    func tripsForYear(_ year: Int) -> [Trip] {
+        let calendar = Calendar.current
+        return trips.filter { calendar.component(.year, from: $0.startDate) == year }
+    }
+
+    var activeTrips: [Trip] {
+        trips.filter { $0.isActive }
+    }
+
+    func updateTripNotes(_ trip: Trip, notes: String) {
+        guard let db = db else { return }
+        do {
+            let row = tripsTable.filter(tripId == trip.id)
+            try db.run(row.update(tripNotes <- notes))
+            if let idx = trips.firstIndex(where: { $0.id == trip.id }) {
+                trips[idx].notes = notes
+            }
+        } catch {
+            print("Update trip notes error: \(error)")
+        }
+    }
+
+    func updateTripPrivacy(_ trip: Trip, isPrivate: Bool) {
+        guard let db = db else { return }
+        do {
+            let row = tripsTable.filter(tripId == trip.id)
+            try db.run(row.update(tripIsPrivate <- isPrivate))
+            if let idx = trips.firstIndex(where: { $0.id == trip.id }) {
+                trips[idx].isPrivate = isPrivate
+            }
+        } catch {
+            print("Update trip privacy error: \(error)")
+        }
+    }
+
+    func updateVisitNotes(_ visit: Visit, notes: String) {
+        guard let db = db else { return }
+        do {
+            let row = visitsTable.filter(visitId == visit.id)
+            try db.run(row.update(visitNotes <- notes))
+            if let tripIdx = trips.firstIndex(where: { $0.id == visit.tripId }),
+               let visitIdx = trips[tripIdx].visits.firstIndex(where: { $0.id == visit.id }) {
+                trips[tripIdx].visits[visitIdx].notes = notes
+            }
+        } catch {
+            print("Update visit notes error: \(error)")
         }
     }
 
