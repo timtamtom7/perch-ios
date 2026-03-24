@@ -23,6 +23,8 @@
 		A05090E84B7CD15E07DBDE0B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 07BAF518E608435A38F6CB8B /* SQLite */; };
 		A79E7A21D50FC5F65E500085 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79DC3E44614762374E1484 /* TripDetailView.swift */; };
 		A88908FEAE9A390E6C6555A6 /* TripDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57612FFE2B174530BD42CE /* TripDiaryView.swift */; };
+		AC5C50D5246BB7747C6DCF20 /* TravelDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */; };
+		B2ED9585D8893E87AA2F2E95 /* AreYouTravelingPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */; };
 		B54C4BA35AE3E382135FC36C /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EBFF35E1B85705554C627 /* TripStore.swift */; };
 		B68F87D44CF1975308E03D6D /* TripComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */; };
 		BA7CB1F9D74C1668DE94105F /* TravelStreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83806C51C7FF96A14D405117 /* TravelStreaksView.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouTravelingPromptView.swift; sourceTree = "<group>"; };
 		071EBFF35E1B85705554C627 /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
 		0B79DC3E44614762374E1484 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		140785BDCFCE4565A3525209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		D428344B2A0972E70C3F755D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripComparisonView.swift; sourceTree = "<group>"; };
 		DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostVisitedCitiesView.swift; sourceTree = "<group>"; };
+		E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetectionManager.swift; sourceTree = "<group>"; };
 		E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2BreakdownChartView.swift; sourceTree = "<group>"; };
 		FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInsightsService.swift; sourceTree = "<group>"; };
 		FC5BBD04AC583769A3D2ECA0 /* PerchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerchApp.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 				D428344B2A0972E70C3F755D /* LocationService.swift */,
 				A8D12490AFD56DBFAA859A16 /* SampleData.swift */,
 				69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */,
+				E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */,
 				FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */,
 				071EBFF35E1B85705554C627 /* TripStore.swift */,
 			);
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D374795D01E9C9B148079A1A /* AErrorStatesView.swift */,
+				0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */,
 				E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */,
 				140785BDCFCE4565A3525209 /* ContentView.swift */,
 				DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */,
@@ -246,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12BE91030EBC76002D23F336 /* AErrorStatesView.swift in Sources */,
+				B2ED9585D8893E87AA2F2E95 /* AreYouTravelingPromptView.swift in Sources */,
 				5A05394609CF5C22D1598AB3 /* CO2BreakdownChartView.swift in Sources */,
 				F943B7C613E03FFD9FA3D77D /* CO2Estimator.swift in Sources */,
 				0F6CEBC3A92F003599305527 /* ContentView.swift in Sources */,
@@ -260,6 +267,7 @@
 				0148102DE81283AC055F8B75 /* StartTripInfoView.swift in Sources */,
 				DFA053AD1002F4D15CE16388 /* TemplateStore.swift in Sources */,
 				CF2068124BC0352981D1ABDE /* Theme.swift in Sources */,
+				AC5C50D5246BB7747C6DCF20 /* TravelDetectionManager.swift in Sources */,
 				549B61A7A33A602AB2C796A2 /* TravelInsightsService.swift in Sources */,
 				BA7CB1F9D74C1668DE94105F /* TravelStreaksView.swift in Sources */,
 				3A57E302CDD878A0E233204F /* Trip.swift in Sources */,

@@ -4,6 +4,7 @@ struct ContentView: View {
     @EnvironmentObject var tripStore: TripStore
     @EnvironmentObject var locationService: LocationService
     @EnvironmentObject var templateStore: TemplateStore
+    @EnvironmentObject var detectionManager: TravelDetectionManager
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var showingSettings = false
     @State private var showingStartTripInfo = false
@@ -14,6 +15,8 @@ struct ContentView: View {
     @State private var showingMultiTrip = false
     @State private var showingInsights = false
     @State private var showingLocationInsufficient = false
+    @State private var showingTravelPrompt = false
+    @State private var showingAutoEndBanner = false
 
     private var currentYear: Int {
         Calendar.current.component(.year, from: Date())
@@ -113,6 +116,10 @@ struct ContentView: View {
         }
         .onAppear {
             checkLocationPermission()
+            // Start location monitoring if user has trips
+            if !tripStore.trips.isEmpty && !locationService.isMonitoring {
+                locationService.startMonitoring()
+            }
         }
         .onReceive(NotificationCenter.default.publisher(for: .didRecordNewVisit)) { notification in
             if let userInfo = notification.userInfo,
@@ -120,11 +127,44 @@ struct ContentView: View {
                 // Good visit recorded
             }
         }
+        .onChange(of: detectionManager.shouldPromptTravel) { _, newValue in
+            if newValue && tripStore.activeTrip == nil {
+                showingTravelPrompt = true
+            }
+        }
+        .onChange(of: locationService.lastLocation) { _, newLocation in
+            guard let location = newLocation, tripStore.activeTrip != nil else { return }
+            // Check if user is back near home
+            if detectionManager.checkIfNearHome(currentLocation: location) {
+                showingAutoEndBanner = true
+            }
+        }
+        .sheet(isPresented: $showingTravelPrompt) {
+            AreYouTravelingPromptView(detectionManager: detectionManager)
+                .presentationDetents([.medium])
+                .presentationDragIndicator(.hidden)
+        }
     }
 
     private var mainContent: some View {
         ScrollView {
             VStack(spacing: 20) {
+                // Auto-end banner (when back home)
+                if showingAutoEndBanner, let active = tripStore.activeTrip {
+                    AutoEndTripBanner(
+                        trip: active,
+                        onEnd: {
+                            _ = tripStore.endTrip()
+                            locationService.stopMonitoring()
+                            showingAutoEndBanner = false
+                        },
+                        onKeep: {
+                            showingAutoEndBanner = false
+                        }
+                    )
+                    .transition(.move(edge: .top).combined(with: .opacity))
+                }
+
                 // Active trips (if multiple)
                 if tripStore.activeTrips.count > 1 {
                     MultipleActiveTripsBanner(
@@ -133,7 +173,7 @@ struct ContentView: View {
                     )
                 }
 
-                if let active = tripStore.activeTrip {
+                if let active = tripStore.activeTrip, !showingAutoEndBanner {
                     ActiveTripCard(trip: active)
                 }
 
@@ -517,9 +557,17 @@ struct ActiveTripCard: View {
     private func startTimer() {
         duration = Date().timeIntervalSince(trip.startDate)
         visitsCount = trip.visits.count
+        let tripStart = trip.startDate
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
-            duration = Date().timeIntervalSince(trip.startDate)
+            let newDuration = Date().timeIntervalSince(tripStart)
+            Task { @MainActor in
+                self.updateDuration(newDuration)
+            }
         }
+    }
+    
+    private func updateDuration(_ newDuration: TimeInterval) {
+        duration = newDuration
     }
 
     private func observeVisits() {
@@ -668,8 +716,6 @@ struct TravelInsightsFullView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    let stats = tripStore.travelStats(for: year)
-
                     // CO₂ comparison
                     let comparison = insights.compareToAverage(year: year)
                     CO2ComparisonView(comparison: comparison, year: year)
