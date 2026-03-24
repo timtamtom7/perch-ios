@@ -1,0 +1,35 @@
+name: Perch
+options:
+  bundleIdPrefix: com.perch
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    INFOPLIST_FILE: Perch/Resources/Info.plist
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    GENERATE_INFOPLIST_FILE: false
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ""
+
+packages:
+  SQLite:
+    url: https://github.com/stephencelis/SQLite.swift
+    from: "0.15.3"
+
+targets:
+  Perch:
+    type: application
+    platform: iOS
+    sources:
+      - path: Perch/Sources
+      - path: Perch/Resources
+    dependencies:
+      - package: SQLite
+    settings:
+      base:
+        INFOPLIST_FILE: Perch/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.perch.app
