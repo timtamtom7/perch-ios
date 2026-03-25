@@ -155,7 +155,6 @@ struct ActiveTripRow: View {
     let onTap: () -> Void
     @EnvironmentObject var tripStore: TripStore
     @State private var duration: TimeInterval = 0
-    @State private var timer: Timer?
 
     var body: some View {
         Button(action: onTap) {
@@ -211,10 +210,10 @@ struct ActiveTripRow: View {
             .cornerRadius(16)
         }
         .onAppear {
-            startTimer()
+            updateDuration()
         }
-        .onDisappear {
-            timer?.invalidate()
+        .onReceive(Timer.publish(every: 60, on: .main, in: .common).autoconnect()) { _ in
+            updateDuration()
         }
     }
 
@@ -228,15 +227,11 @@ struct ActiveTripRow: View {
         return "\(hours)h"
     }
 
-    private func startTimer() {
+    private func updateDuration() {
         duration = Date().timeIntervalSince(trip.startDate)
-        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
-            duration = Date().timeIntervalSince(trip.startDate)
-        }
     }
 
     private func endTrip() {
-        timer?.invalidate()
         // Set this as active trip first
         tripStore.activeTrip = trip
         _ = tripStore.endTrip()

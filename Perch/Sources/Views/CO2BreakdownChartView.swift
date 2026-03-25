@@ -76,10 +76,8 @@ struct CO2BreakdownChartView: View {
                     }
                 }
             }
-            .chartBackground { proxy in
-                GeometryReader { geo in
-                    let frame = geo[proxy.plotFrame!]
-                }
+            .chartBackground { _ in
+                // R6: Reserved for future chart background customization
             }
 
             // Mode rows

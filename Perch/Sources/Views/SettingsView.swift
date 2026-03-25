@@ -279,7 +279,8 @@ struct SettingsView: View {
     }
 
     private var locationPermissionStatus: String {
-        let status = CLLocationManager.authorizationStatus()
+        // R6: Use instance method to avoid deprecated class method
+        let status = CLLocationManager().authorizationStatus
         switch status {
         case .authorizedAlways: return "Always"
         case .authorizedWhenInUse: return "When In Use"
