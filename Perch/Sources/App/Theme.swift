@@ -10,7 +10,6 @@ struct Theme {
     static let textPrimary = Color(hex: "f0ebe4")
     static let textSecondary = Color(hex: "8a7f74")
     static let textTertiary = Color(hex: "4a4540")
-    static let textTertiary = Color(hex: "4a4540")
     static let co2Neutral = Color(hex: "9ca3af")
 
     // Semantic colors

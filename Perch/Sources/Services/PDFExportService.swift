@@ -2,9 +2,9 @@ import Foundation
 import PDFKit
 import SwiftUI
 
-final class PDFExportService {
+final class PDFExportService: @unchecked Sendable {
     static let shared = PDFExportService()
-    
+
     private init() {}
     
     func generateItineraryPDF(for trip: Trip) -> Data? {
@@ -82,7 +82,7 @@ final class PDFExportService {
                     .font: cityFont,
                     .foregroundColor: UIColor.black
                 ]
-                let cityText = "\(index + 1). \(visit.name)"
+                let cityText = "\(index + 1). \(visit.displayName)"
                 cityText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: cityAttributes)
                 yPosition += 22
                 
@@ -125,6 +125,7 @@ final class PDFExportService {
         return data
     }
     
+    @MainActor
     func saveAndSharePDF(trip: Trip, from viewController: UIViewController) {
         guard let pdfData = generateItineraryPDF(for: trip) else { return }
         

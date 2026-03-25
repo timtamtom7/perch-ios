@@ -17,6 +17,8 @@ struct ContentView: View {
     @State private var showingLocationInsufficient = false
     @State private var showingTravelPrompt = false
     @State private var showingAutoEndBanner = false
+    @State private var showingDeleteAlert = false  // R6: Fix missing state variable
+    @State private var tripToDelete: Trip?         // R6: Fix missing state variable
 
     private var currentYear: Int {
         Calendar.current.component(.year, from: Date())
@@ -52,7 +54,7 @@ struct ContentView: View {
                 }
                 .onAppear {
                     if !hasCompletedOnboarding {
-                        hasCompletedOnboarding = tripStore.hasCompletedOnboarding
+                        // AppStorage persists this across launches
                     }
                 }
         }
@@ -107,48 +109,6 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-        }
-    }
-                TravelInsightsFullView(year: currentYear)
-            }
-            .sheet(item: $selectedTrip) { trip in
-                TripDetailView(trip: trip)
-            }
-            .alert("Location Data Insufficient", isPresented: $showingLocationInsufficient) {
-                Button("OK", role: .cancel) {}
-            } message: {
-                Text("Perch hasn't recorded enough location data for this trip. Make sure location access is enabled and try moving to a new city.")
-            }
-        }
-        .onAppear {
-            checkLocationPermission()
-            // Start location monitoring if user has trips
-            if !tripStore.trips.isEmpty && !locationService.isMonitoring {
-                locationService.startMonitoring()
-            }
-        }
-        .onReceive(NotificationCenter.default.publisher(for: .didRecordNewVisit)) { notification in
-            if let userInfo = notification.userInfo,
-               let city = userInfo["city"] as? String, !city.isEmpty {
-                // Good visit recorded
-            }
-        }
-        .onChange(of: detectionManager.shouldPromptTravel) { _, newValue in
-            if newValue && tripStore.activeTrip == nil {
-                showingTravelPrompt = true
-            }
-        }
-        .onChange(of: locationService.lastLocation) { _, newLocation in
-            guard let location = newLocation, tripStore.activeTrip != nil else { return }
-            // Check if user is back near home
-            if detectionManager.checkIfNearHome(currentLocation: location) {
-                showingAutoEndBanner = true
-            }
-        }
-        .sheet(isPresented: $showingTravelPrompt) {
-            AreYouTravelingPromptView(detectionManager: detectionManager)
-                .presentationDetents([.medium])
-                .presentationDragIndicator(.hidden)
         }
     }
 
