@@ -13,12 +13,16 @@
 		28B4F682D56F7787503745D2 /* TripTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AC6D83A486D087B22B2B5 /* TripTemplate.swift */; };
 		2F4EE32D226AA5066FB96495 /* PDFExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4B1D228B31C9323F70690 /* PDFExportService.swift */; };
 		3A57E302CDD878A0E233204F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD209C26A6995661E05F8CAA /* Trip.swift */; };
+		45BAACF0F3C3284A865BFB71 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7709C7BD8D2323B78D37B /* CommunityView.swift */; };
 		52230FEB66110A31361A27D0 /* TripTemplateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */; };
 		549B61A7A33A602AB2C796A2 /* TravelInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */; };
 		5A05394609CF5C22D1598AB3 /* CO2BreakdownChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */; };
 		5C0117D8B0BD275E67EF4482 /* MostVisitedCitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */; };
 		5E71970442CD4A50368476E4 /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE376BA0C52C9FD1332BC67 /* PricingView.swift */; };
+		6EB088D6D49014E35F8B0DAA /* DeepTravelAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D960343B9187DC308C73FCF7 /* DeepTravelAnalysisView.swift */; };
 		713152E6ED795FD01191A7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E8CBC8C80D5DE5148AC46 /* Assets.xcassets */; };
+		7B278D70A4235636E9D56746 /* CrossDeviceSyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBC686DE0611D404E0A900 /* CrossDeviceSyncView.swift */; };
+		7BA24261CE5EB692A275142B /* CrossDeviceSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05DA3F819AAF8E839BF063 /* CrossDeviceSyncService.swift */; };
 		7F070433B11120EB3B10C1D1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D930460BDFCD3421AB028E /* OnboardingView.swift */; };
 		98FDF67656AFD6EB08DC0140 /* TripTemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78818E05940FFBF3217C7AA2 /* TripTemplatesView.swift */; };
 		A05090E84B7CD15E07DBDE0B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 07BAF518E608435A38F6CB8B /* SQLite */; };
@@ -29,14 +33,17 @@
 		B54C4BA35AE3E382135FC36C /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EBFF35E1B85705554C627 /* TripStore.swift */; };
 		B68F87D44CF1975308E03D6D /* TripComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */; };
 		BA7CB1F9D74C1668DE94105F /* TravelStreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83806C51C7FF96A14D405117 /* TravelStreaksView.swift */; };
+		CC358F3F30A312C55E8930F1 /* DeepTravelAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2F322560F9C955BF05810 /* DeepTravelAnalysisService.swift */; };
 		CF2068124BC0352981D1ABDE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180D1F5DE37968ADDFD80B4 /* Theme.swift */; };
 		D30AEDA5D893DFB9F4B66A50 /* PerchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BBD04AC583769A3D2ECA0 /* PerchApp.swift */; };
+		DF442B43C75BDB3DE525A19A /* SubscriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D86F652262DA7026FB6D03 /* SubscriptionsView.swift */; };
 		DFA053AD1002F4D15CE16388 /* TemplateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */; };
 		E47C1A3C0636CB757F1020E9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D12490AFD56DBFAA859A16 /* SampleData.swift */; };
 		E61674E2751D4E2A87F7EF20 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5155EAAB4C6323F4FE3E61 /* SettingsView.swift */; };
 		E81B78FFE638B45B43CF66BF /* MultiTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB0F0AAA121A9595AB15F9 /* MultiTripView.swift */; };
 		F87D96C1748650047B37E77C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428344B2A0972E70C3F755D /* LocationService.swift */; };
 		F943B7C613E03FFD9FA3D77D /* CO2Estimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */; };
+		F9A955CEB7C0ECBED1D4D459 /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86C8E61910AD4F289432584 /* CommunityService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +56,8 @@
 		397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2Estimator.swift; sourceTree = "<group>"; };
 		4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTemplateCardView.swift; sourceTree = "<group>"; };
 		4C5155EAAB4C6323F4FE3E61 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4ED7709C7BD8D2323B78D37B /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		53D86F652262DA7026FB6D03 /* SubscriptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsView.swift; sourceTree = "<group>"; };
 		57D930460BDFCD3421AB028E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		5F9E8CBC8C80D5DE5148AC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateStore.swift; sourceTree = "<group>"; };
@@ -59,16 +68,21 @@
 		8FE376BA0C52C9FD1332BC67 /* PricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingView.swift; sourceTree = "<group>"; };
 		A8D12490AFD56DBFAA859A16 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		ABFB0F0AAA121A9595AB15F9 /* MultiTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTripView.swift; sourceTree = "<group>"; };
+		AC05DA3F819AAF8E839BF063 /* CrossDeviceSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossDeviceSyncService.swift; sourceTree = "<group>"; };
+		B86C8E61910AD4F289432584 /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
 		CA57612FFE2B174530BD42CE /* TripDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDiaryView.swift; sourceTree = "<group>"; };
 		CD209C26A6995661E05F8CAA /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		D12799A47C1915EC77F5114B /* StartTripInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTripInfoView.swift; sourceTree = "<group>"; };
 		D374795D01E9C9B148079A1A /* AErrorStatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AErrorStatesView.swift; sourceTree = "<group>"; };
 		D41D4D3B908363F711572982 /* Perch.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Perch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D428344B2A0972E70C3F755D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		D7EBC686DE0611D404E0A900 /* CrossDeviceSyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossDeviceSyncView.swift; sourceTree = "<group>"; };
+		D960343B9187DC308C73FCF7 /* DeepTravelAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepTravelAnalysisView.swift; sourceTree = "<group>"; };
 		DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripComparisonView.swift; sourceTree = "<group>"; };
 		DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostVisitedCitiesView.swift; sourceTree = "<group>"; };
 		E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetectionManager.swift; sourceTree = "<group>"; };
 		E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2BreakdownChartView.swift; sourceTree = "<group>"; };
+		EAC2F322560F9C955BF05810 /* DeepTravelAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepTravelAnalysisService.swift; sourceTree = "<group>"; };
 		FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInsightsService.swift; sourceTree = "<group>"; };
 		FC5BBD04AC583769A3D2ECA0 /* PerchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerchApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */,
+				B86C8E61910AD4F289432584 /* CommunityService.swift */,
+				AC05DA3F819AAF8E839BF063 /* CrossDeviceSyncService.swift */,
+				EAC2F322560F9C955BF05810 /* DeepTravelAnalysisService.swift */,
 				D428344B2A0972E70C3F755D /* LocationService.swift */,
 				21F4B1D228B31C9323F70690 /* PDFExportService.swift */,
 				A8D12490AFD56DBFAA859A16 /* SampleData.swift */,
@@ -106,13 +123,17 @@
 				D374795D01E9C9B148079A1A /* AErrorStatesView.swift */,
 				0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */,
 				E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */,
+				4ED7709C7BD8D2323B78D37B /* CommunityView.swift */,
 				140785BDCFCE4565A3525209 /* ContentView.swift */,
+				D7EBC686DE0611D404E0A900 /* CrossDeviceSyncView.swift */,
+				D960343B9187DC308C73FCF7 /* DeepTravelAnalysisView.swift */,
 				DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */,
 				ABFB0F0AAA121A9595AB15F9 /* MultiTripView.swift */,
 				57D930460BDFCD3421AB028E /* OnboardingView.swift */,
 				8FE376BA0C52C9FD1332BC67 /* PricingView.swift */,
 				4C5155EAAB4C6323F4FE3E61 /* SettingsView.swift */,
 				D12799A47C1915EC77F5114B /* StartTripInfoView.swift */,
+				53D86F652262DA7026FB6D03 /* SubscriptionsView.swift */,
 				83806C51C7FF96A14D405117 /* TravelStreaksView.swift */,
 				DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */,
 				0B79DC3E44614762374E1484 /* TripDetailView.swift */,
@@ -258,7 +279,13 @@
 				B2ED9585D8893E87AA2F2E95 /* AreYouTravelingPromptView.swift in Sources */,
 				5A05394609CF5C22D1598AB3 /* CO2BreakdownChartView.swift in Sources */,
 				F943B7C613E03FFD9FA3D77D /* CO2Estimator.swift in Sources */,
+				F9A955CEB7C0ECBED1D4D459 /* CommunityService.swift in Sources */,
+				45BAACF0F3C3284A865BFB71 /* CommunityView.swift in Sources */,
 				0F6CEBC3A92F003599305527 /* ContentView.swift in Sources */,
+				7BA24261CE5EB692A275142B /* CrossDeviceSyncService.swift in Sources */,
+				7B278D70A4235636E9D56746 /* CrossDeviceSyncView.swift in Sources */,
+				CC358F3F30A312C55E8930F1 /* DeepTravelAnalysisService.swift in Sources */,
+				6EB088D6D49014E35F8B0DAA /* DeepTravelAnalysisView.swift in Sources */,
 				F87D96C1748650047B37E77C /* LocationService.swift in Sources */,
 				5C0117D8B0BD275E67EF4482 /* MostVisitedCitiesView.swift in Sources */,
 				E81B78FFE638B45B43CF66BF /* MultiTripView.swift in Sources */,
@@ -269,6 +296,7 @@
 				E47C1A3C0636CB757F1020E9 /* SampleData.swift in Sources */,
 				E61674E2751D4E2A87F7EF20 /* SettingsView.swift in Sources */,
 				0148102DE81283AC055F8B75 /* StartTripInfoView.swift in Sources */,
+				DF442B43C75BDB3DE525A19A /* SubscriptionsView.swift in Sources */,
 				DFA053AD1002F4D15CE16388 /* TemplateStore.swift in Sources */,
 				CF2068124BC0352981D1ABDE /* Theme.swift in Sources */,
 				AC5C50D5246BB7747C6DCF20 /* TravelDetectionManager.swift in Sources */,
@@ -324,6 +352,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -339,6 +368,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Perch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +432,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -423,6 +454,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Perch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
