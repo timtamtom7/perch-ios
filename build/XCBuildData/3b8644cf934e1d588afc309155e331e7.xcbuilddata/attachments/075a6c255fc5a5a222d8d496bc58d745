@@ -1,0 +1,289 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Perch-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Perch-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Perch-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Perch-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Perch-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/App/PerchApp.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PerchApp~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/App/Theme.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Theme~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Models/Trip.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/Trip~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Models/TripTemplate.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplate~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/CO2Estimator.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2Estimator~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/LocationService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/LocationService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/SampleData.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SampleData~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/TemplateStore.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TemplateStore~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/TravelDetectionManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelDetectionManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/TravelInsightsService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelInsightsService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/TripStore.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripStore~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/AErrorStatesView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AErrorStatesView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/AreYouTravelingPromptView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/CO2BreakdownChartView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/CO2BreakdownChartView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/MostVisitedCitiesView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MostVisitedCitiesView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/MultiTripView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/MultiTripView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/OnboardingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/OnboardingView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/PricingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/PricingView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/SettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/StartTripInfoView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/StartTripInfoView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TravelStreaksView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TravelStreaksView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripComparisonView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripComparisonView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripDetailView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDetailView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripDiaryView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripDiaryView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripTemplateCardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplateCardView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripTemplatesView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/TripTemplatesView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/perch-ios/build/Perch.build/Debug-iphoneos/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

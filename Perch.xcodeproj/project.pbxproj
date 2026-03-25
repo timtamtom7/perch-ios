@@ -11,6 +11,7 @@
 		0F6CEBC3A92F003599305527 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140785BDCFCE4565A3525209 /* ContentView.swift */; };
 		12BE91030EBC76002D23F336 /* AErrorStatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374795D01E9C9B148079A1A /* AErrorStatesView.swift */; };
 		28B4F682D56F7787503745D2 /* TripTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AC6D83A486D087B22B2B5 /* TripTemplate.swift */; };
+		2F4EE32D226AA5066FB96495 /* PDFExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4B1D228B31C9323F70690 /* PDFExportService.swift */; };
 		3A57E302CDD878A0E233204F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD209C26A6995661E05F8CAA /* Trip.swift */; };
 		52230FEB66110A31361A27D0 /* TripTemplateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */; };
 		549B61A7A33A602AB2C796A2 /* TravelInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */; };
@@ -43,6 +44,7 @@
 		071EBFF35E1B85705554C627 /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
 		0B79DC3E44614762374E1484 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		140785BDCFCE4565A3525209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		21F4B1D228B31C9323F70690 /* PDFExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFExportService.swift; sourceTree = "<group>"; };
 		246AADB5E59EDC581E467542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2Estimator.swift; sourceTree = "<group>"; };
 		4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTemplateCardView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */,
 				D428344B2A0972E70C3F755D /* LocationService.swift */,
+				21F4B1D228B31C9323F70690 /* PDFExportService.swift */,
 				A8D12490AFD56DBFAA859A16 /* SampleData.swift */,
 				69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */,
 				E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */,
@@ -260,6 +263,7 @@
 				5C0117D8B0BD275E67EF4482 /* MostVisitedCitiesView.swift in Sources */,
 				E81B78FFE638B45B43CF66BF /* MultiTripView.swift in Sources */,
 				7F070433B11120EB3B10C1D1 /* OnboardingView.swift in Sources */,
+				2F4EE32D226AA5066FB96495 /* PDFExportService.swift in Sources */,
 				D30AEDA5D893DFB9F4B66A50 /* PerchApp.swift in Sources */,
 				5E71970442CD4A50368476E4 /* PricingView.swift in Sources */,
 				E47C1A3C0636CB757F1020E9 /* SampleData.swift in Sources */,

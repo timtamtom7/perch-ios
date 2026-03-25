@@ -27,6 +27,38 @@ struct ContentView: View {
     }
 
     var body: some View {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            iPadLayout
+        } else {
+            iPhoneLayout
+                .alert("Delete Trip?", isPresented: $showingDeleteAlert) {
+                    Button("Cancel", role: .cancel) {}
+                    Button("Delete", role: .destructive) {
+                        if let trip = tripStore.trips.first(where: { $0.id == tripToDelete?.id }) {
+                            tripStore.deleteTrip(trip)
+                        }
+                    }
+                } message: {
+                    Text("This will permanently delete \"\(tripToDelete?.name ?? "")\" and all its visits. This action cannot be undone.")
+                }
+                .sheet(isPresented: $showingStartTripInfo) {
+                    StartTripInfoView()
+                }
+                .sheet(isPresented: $showingPricing) {
+                    PricingView()
+                }
+                .sheet(item: $selectedTrip) { trip in
+                    TripDetailView(trip: trip)
+                }
+                .onAppear {
+                    if !hasCompletedOnboarding {
+                        hasCompletedOnboarding = tripStore.hasCompletedOnboarding
+                    }
+                }
+        }
+    }
+
+    private var iPhoneLayout: some View {
         NavigationStack {
             Group {
                 if !hasCompletedOnboarding {
@@ -42,67 +74,41 @@ struct ContentView: View {
             }
             .background(Theme.background)
             .navigationTitle("Perch")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        showingPricing = true
-                    } label: {
-                        Image(systemName: "crown.fill")
-                            .foregroundColor(Theme.terracotta)
-                            .font(.system(size: 16))
-                    }
+        }
+    }
+
+    private var iPadLayout: some View {
+        NavigationSplitView {
+            List {
+                Section {
+                    Label("All Trips", systemImage: "suitcase.fill")
+                        .onTapGesture { selectedTrip = nil }
+                        .listRowBackground(selectedTrip == nil ? Theme.terracotta.opacity(0.15) : Color.clear)
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    HStack(spacing: 16) {
-                        if tripStore.activeTrips.count > 1 {
-                            Button {
-                                showingMultiTrip = true
-                            } label: {
-                                ZStack(alignment: .topTrailing) {
-                                    Image(systemName: "suitcase.fill")
-                                        .foregroundColor(Theme.sage)
-                                    Circle()
-                                        .fill(Theme.terracotta)
-                                        .frame(width: 8, height: 8)
-                                }
-                            }
-                        }
-
-                        Button {
-                            showingOnboarding = true
-                        } label: {
-                            Image(systemName: "questionmark.circle")
-                                .foregroundColor(Theme.textSecondary)
-                        }
-
-                        Button {
-                            showingSettings = true
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .foregroundColor(Theme.textSecondary)
-                        }
-                    }
+                ForEach(tripStore.trips) { trip in
+                    Label(trip.name.isEmpty ? "Untitled" : trip.name, systemImage: trip.isActive ? "location.fill" : "checkmark.circle")
+                        .onTapGesture { selectedTrip = trip }
+                        .listRowBackground(selectedTrip?.id == trip.id ? Theme.terracotta.opacity(0.15) : Color.clear)
                 }
             }
-            .sheet(isPresented: $showingSettings) {
-                SettingsView()
+            .listStyle(.sidebar)
+            .navigationTitle("Perch")
+        } detail: {
+            if let trip = selectedTrip {
+                TripDetailView(trip: trip)
+            } else {
+                VStack(spacing: 16) {
+                    Image(systemName: "suitcase")
+                        .font(.system(size: 64))
+                        .foregroundColor(Theme.textTertiary)
+                    Text("Select a trip")
+                        .font(.headline)
+                        .foregroundColor(Theme.textSecondary)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .sheet(isPresented: $showingStartTripInfo) {
-                StartTripInfoView()
-            }
-            .sheet(isPresented: $showingPricing) {
-                PricingView()
-            }
-            .sheet(isPresented: $showingOnboarding) {
-                OnboardingView()
-            }
-            .sheet(isPresented: $showingTemplates) {
-                TripTemplatesView()
-            }
-            .sheet(isPresented: $showingMultiTrip) {
-                MultiTripView()
-            }
-            .sheet(isPresented: $showingInsights) {
+        }
+    }
                 TravelInsightsFullView(year: currentYear)
             }
             .sheet(item: $selectedTrip) { trip in

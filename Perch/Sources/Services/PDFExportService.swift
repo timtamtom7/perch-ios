@@ -1,0 +1,148 @@
+import Foundation
+import PDFKit
+import SwiftUI
+
+final class PDFExportService {
+    static let shared = PDFExportService()
+    
+    private init() {}
+    
+    func generateItineraryPDF(for trip: Trip) -> Data? {
+        let pageWidth: CGFloat = 612
+        let pageHeight: CGFloat = 792
+        let margin: CGFloat = 50
+        
+        let pdfMetaData = [
+            kCGPDFContextCreator: "Perch",
+            kCGPDFContextAuthor: "Perch App",
+            kCGPDFContextTitle: trip.name.isEmpty ? "Trip Itinerary" : trip.name
+        ]
+        
+        let format = UIGraphicsPDFRendererFormat()
+        format.documentInfo = pdfMetaData as [String: Any]
+        
+        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+        
+        let data = renderer.pdfData { context in
+            context.beginPage()
+            
+            var yPosition: CGFloat = margin
+            
+            // Title
+            let titleFont = UIFont.systemFont(ofSize: 28, weight: .bold)
+            let titleAttributes: [NSAttributedString.Key: Any] = [
+                .font: titleFont,
+                .foregroundColor: UIColor.black
+            ]
+            
+            let title = trip.name.isEmpty ? "Trip Itinerary" : trip.name
+            title.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: titleAttributes)
+            yPosition += 40
+            
+            // Date range
+            let dateFont = UIFont.systemFont(ofSize: 14, weight: .regular)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .long
+            
+            let dateText = "\(dateFormatter.string(from: trip.startDate)) - \(trip.endDate.map { dateFormatter.string(from: $0) } ?? "Ongoing")"
+            let dateAttributes: [NSAttributedString.Key: Any] = [
+                .font: dateFont,
+                .foregroundColor: UIColor.darkGray
+            ]
+            dateText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: dateAttributes)
+            yPosition += 30
+            
+            // Duration and distance
+            let statsText = "\(trip.formattedDuration) • \(String(format: "%.1f", trip.totalDistanceKm)) km"
+            statsText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: dateAttributes)
+            yPosition += 40
+            
+            // Separator
+            let separatorPath = UIBezierPath()
+            separatorPath.move(to: CGPoint(x: margin, y: yPosition))
+            separatorPath.addLine(to: CGPoint(x: pageWidth - margin, y: yPosition))
+            UIColor.lightGray.setStroke()
+            separatorPath.stroke()
+            yPosition += 20
+            
+            // Visits
+            let visitFont = UIFont.systemFont(ofSize: 12, weight: .regular)
+            let cityFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
+            
+            for (index, visit) in trip.visits.enumerated() {
+                // Check if we need a new page
+                if yPosition > pageHeight - 100 {
+                    context.beginPage()
+                    yPosition = margin
+                }
+                
+                // City name
+                let cityAttributes: [NSAttributedString.Key: Any] = [
+                    .font: cityFont,
+                    .foregroundColor: UIColor.black
+                ]
+                let cityText = "\(index + 1). \(visit.name)"
+                cityText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: cityAttributes)
+                yPosition += 22
+                
+                // Visit details
+                let detailsAttributes: [NSAttributedString.Key: Any] = [
+                    .font: visitFont,
+                    .foregroundColor: UIColor.darkGray
+                ]
+                
+                let arrivalText = "  Arrived: \(dateFormatter.string(from: visit.arrivalDate))"
+                arrivalText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: detailsAttributes)
+                yPosition += 16
+                
+                if let departure = visit.departureDate {
+                    let departureText = "  Departed: \(dateFormatter.string(from: departure))"
+                    departureText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: detailsAttributes)
+                    yPosition += 16
+                }
+                
+                if !visit.notes.isEmpty {
+                    let notesText = "  Notes: \(visit.notes)"
+                    notesText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: detailsAttributes)
+                    yPosition += 16
+                }
+                
+                yPosition += 16
+            }
+            
+            // Footer
+            yPosition = pageHeight - margin
+            let footerFont = UIFont.systemFont(ofSize: 10, weight: .light)
+            let footerText = "Generated by Perch • \(dateFormatter.string(from: Date()))"
+            let footerAttributes: [NSAttributedString.Key: Any] = [
+                .font: footerFont,
+                .foregroundColor: UIColor.lightGray
+            ]
+            footerText.draw(at: CGPoint(x: margin, y: yPosition), withAttributes: footerAttributes)
+        }
+        
+        return data
+    }
+    
+    func saveAndSharePDF(trip: Trip, from viewController: UIViewController) {
+        guard let pdfData = generateItineraryPDF(for: trip) else { return }
+        
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent("\(trip.name.isEmpty ? "itinerary" : trip.name).pdf")
+        
+        do {
+            try pdfData.write(to: tempURL)
+            
+            let activityVC = UIActivityViewController(activityItems: [tempURL], applicationActivities: nil)
+            
+            if let popover = activityVC.popoverPresentationController {
+                popover.sourceView = viewController.view
+                popover.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+            }
+            
+            viewController.present(activityVC, animated: true)
+        } catch {
+            print("Failed to save PDF: \(error)")
+        }
+    }
+}
