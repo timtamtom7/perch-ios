@@ -328,10 +328,10 @@ struct TripMapPreview: View {
         guard !visits.isEmpty else { return }
         let lats = visits.map { $0.latitude }
         let lons = visits.map { $0.longitude }
-        let minLat = lats.min()!
-        let maxLat = lats.max()!
-        let minLon = lons.min()!
-        let maxLon = lons.max()!
+        let minLat = lats.min() ?? 0
+        let maxLat = lats.max() ?? 0
+        let minLon = lons.min() ?? 0
+        let maxLon = lons.max() ?? 0
 
         region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: (minLat + maxLat) / 2, longitude: (minLon + maxLon) / 2),

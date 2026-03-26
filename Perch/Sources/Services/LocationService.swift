@@ -60,6 +60,7 @@ final class LocationService: NSObject, ObservableObject {
                     continuation.resume(returning: (nil, nil))
                     return
                 }
+                // placemark deprecated in iOS 26; placemark API still functional
                 let placemark = first.placemark
                 let city = placemark.locality
                 let country = placemark.country
@@ -103,14 +104,15 @@ extension LocationService: CLLocationManagerDelegate {
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
         Task { @MainActor [weak self] in
-            self?.lastLocation = location
-            self?.checkForStationary(location: location)
+            guard let self = self else { return }
+            self.lastLocation = location
+            self.checkForStationary(location: location)
 
-            if self?.shouldRecordNewVisit(newLocation: location) == true {
-                self?.lastRecordedLocation = location
-                let (city, country) = await self!.geocode(location: location)
-                self?.lastVisitCity = city
-                self?.lastVisitCountry = country
+            if self.shouldRecordNewVisit(newLocation: location) {
+                self.lastRecordedLocation = location
+                let (city, country) = await self.geocode(location: location)
+                self.lastVisitCity = city
+                self.lastVisitCountry = country
                 NotificationCenter.default.post(
                     name: .didRecordNewVisit,
                     object: nil,

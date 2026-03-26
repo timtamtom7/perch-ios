@@ -33,7 +33,10 @@ final class TemplateStore: ObservableObject {
 
     private func setupDatabase() {
         do {
-            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+                print("TemplateStore setup error: Could not find documents directory")
+                return
+            }
             db = try Connection("\(path)/perch.sqlite3")
             try createTables()
         } catch {

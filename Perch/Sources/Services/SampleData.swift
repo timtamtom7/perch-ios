@@ -69,7 +69,7 @@ struct TravelInsightExamples {
         "new_year": "You started 2025 in a new country. No bad way to begin a year."
     ]
 
-    static let sampleInsight: String = insights["frequent_flyer"]!
+    static let sampleInsight: String = insights["frequent_flyer"] ?? "Start traveling to see insights."
 }
 
 /// Compelling copy about travel and memory

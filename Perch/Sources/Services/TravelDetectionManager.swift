@@ -14,6 +14,7 @@ final class TravelDetectionManager: ObservableObject {
     private var homeLocation: CLLocation?
     private let homeLocationLatKey = "perch_home_lat"
     private let homeLocationLonKey = "perch_home_lon"
+    private var visitObserver: Any?
     
     /// Distance threshold in meters to consider user "traveling" (100km)
     private let travelThreshold: Double = 100_000
@@ -46,7 +47,7 @@ final class TravelDetectionManager: ObservableObject {
     }
     
     private func setupNotificationObserver() {
-        NotificationCenter.default.addObserver(
+        visitObserver = NotificationCenter.default.addObserver(
             forName: .didRecordNewVisit,
             object: nil,
             queue: .main
@@ -60,6 +61,12 @@ final class TravelDetectionManager: ObservableObject {
             Task { @MainActor in
                 self?.handleNewVisit(location: loc, city: city, country: country)
             }
+        }
+    }
+
+    func cleanup() {
+        if let observer = visitObserver {
+            NotificationCenter.default.removeObserver(observer)
         }
     }
     

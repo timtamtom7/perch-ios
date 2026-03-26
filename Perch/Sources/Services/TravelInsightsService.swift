@@ -124,7 +124,6 @@ final class TravelInsightsService: ObservableObject {
         }
 
         // Count consecutive months from start of year
-        let sortedMonths = monthsWithTravel.sorted()
         var consecutive = 0
         for month in 1...12 {
             if monthsWithTravel.contains(month) {

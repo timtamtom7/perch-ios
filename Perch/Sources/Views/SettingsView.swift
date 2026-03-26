@@ -197,7 +197,7 @@ struct SettingsView: View {
                         Text("Version")
                             .foregroundColor(Theme.textPrimary)
                         Spacer()
-                        Text("1.0 (1)")
+                        Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0")
                             .foregroundColor(Theme.textSecondary)
                     }
                     .listRowBackground(Theme.surface)
@@ -206,7 +206,7 @@ struct SettingsView: View {
                         Text("Build")
                             .foregroundColor(Theme.textPrimary)
                         Spacer()
-                        Text("Release")
+                        Text(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1")
                             .foregroundColor(Theme.textSecondary)
                     }
                     .listRowBackground(Theme.surface)
@@ -279,7 +279,7 @@ struct SettingsView: View {
     }
 
     private var locationPermissionStatus: String {
-        // R6: Use instance method to avoid deprecated class method
+        // Use instance property - works correctly even without delegate attached
         let status = CLLocationManager().authorizationStatus
         switch status {
         case .authorizedAlways: return "Always"

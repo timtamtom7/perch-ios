@@ -17,8 +17,8 @@ struct ContentView: View {
     @State private var showingLocationInsufficient = false
     @State private var showingTravelPrompt = false
     @State private var showingAutoEndBanner = false
-    @State private var showingDeleteAlert = false  // R6: Fix missing state variable
-    @State private var tripToDelete: Trip?         // R6: Fix missing state variable
+    @State private var showingDeleteAlert = false
+    @State private var tripToDelete: Trip?
 
     private var currentYear: Int {
         Calendar.current.component(.year, from: Date())
@@ -434,6 +434,7 @@ struct ActiveTripCard: View {
     @State private var timer: Timer?
     @State private var showingNoLocationsAlert = false
     @State private var visitsCount: Int = 0
+    @State private var visitObserver: Any?
 
     var body: some View {
         VStack(spacing: 0) {
@@ -486,7 +487,7 @@ struct ActiveTripCard: View {
         .onAppear {
             startTimer()
             observeVisits()
-            NotificationCenter.default.addObserver(
+            visitObserver = NotificationCenter.default.addObserver(
                 forName: .didRecordNewVisit,
                 object: nil,
                 queue: .main
@@ -498,6 +499,9 @@ struct ActiveTripCard: View {
         }
         .onDisappear {
             timer?.invalidate()
+            if let observer = visitObserver {
+                NotificationCenter.default.removeObserver(observer)
+            }
         }
         .alert("No locations recorded", isPresented: $showingNoLocationsAlert) {
             Button("End Trip Anyway", role: .destructive) {
@@ -557,10 +561,13 @@ struct ActiveTripCard: View {
 
 struct TravelSummaryCard: View {
     let stats: TravelStats
+    private var currentYear: Int {
+        Calendar.current.component(.year, from: Date())
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("2026 Travel Summary")
+            Text("\(currentYear) Travel Summary")
                 .font(.system(size: 13))
                 .foregroundColor(Theme.textSecondary)
                 .textCase(.uppercase)

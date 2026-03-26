@@ -40,7 +40,10 @@ final class TripStore: ObservableObject {
 
     private func setupDatabase() {
         do {
-            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {
+                print("Database setup error: Could not find documents directory")
+                return
+            }
             db = try Connection("\(path)/perch.sqlite3")
             try createTables()
         } catch {
@@ -175,7 +178,7 @@ final class TripStore: ObservableObject {
 
     @discardableResult
     func endTrip() -> Trip? {
-        guard let db = db, var current = activeTrip else { return nil }
+        guard let db = db, let current = activeTrip else { return nil }
         do {
             let trip = tripsTable.filter(tripId == current.id)
             try db.run(trip.update(

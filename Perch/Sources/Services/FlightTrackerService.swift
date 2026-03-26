@@ -61,8 +61,8 @@ final class FlightTrackerService: ObservableObject {
     }
 
     func scheduleCheckInReminder(for flight: Flight) {
-        let reminderTime = flight.departureTime.addingTimeInterval(-24 * 3600)
-        // Schedule local notification
+        // TODO: Schedule local notification 24h before departure
+        // let reminderTime = flight.departureTime.addingTimeInterval(-24 * 3600)
     }
 
     // MARK: - World Map Data
