@@ -5,6 +5,8 @@ struct ContentView: View {
     @EnvironmentObject var locationService: LocationService
     @EnvironmentObject var templateStore: TemplateStore
     @EnvironmentObject var detectionManager: TravelDetectionManager
+    @EnvironmentObject var packingListStore: PackingListStore
+    @EnvironmentObject var plannedTripStore: PlannedTripStore
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var showingSettings = false
     @State private var showingStartTripInfo = false
@@ -19,6 +21,8 @@ struct ContentView: View {
     @State private var showingAutoEndBanner = false
     @State private var showingDeleteAlert = false
     @State private var tripToDelete: Trip?
+    @State private var showingPackingLists = false
+    @State private var showingPlannedTrips = false
 
     private var currentYear: Int {
         Calendar.current.component(.year, from: Date())
@@ -51,6 +55,12 @@ struct ContentView: View {
                 }
                 .sheet(item: $selectedTrip) { trip in
                     TripDetailView(trip: trip)
+                }
+                .sheet(isPresented: $showingPackingLists) {
+                    PackingListHomeView()
+                }
+                .sheet(isPresented: $showingPlannedTrips) {
+                    PlannedTripsView()
                 }
                 .onAppear {
                     if !hasCompletedOnboarding {
@@ -170,6 +180,12 @@ struct ContentView: View {
                 if !cityRankings.isEmpty {
                     MostVisitedCitiesView(rankings: cityRankings)
                 }
+
+                // Packing Lists
+                PackingListsTeaser(onTap: { showingPackingLists = true })
+
+                // Planned Trips / Countdown
+                PlannedTripsTeaser(onTap: { showingPlannedTrips = true })
 
                 // Start new trip / Use template
                 if tripStore.activeTrip == nil {
@@ -730,5 +746,100 @@ struct TravelInsightsFullView: View {
                 }
             }
         }
+    }
+}
+
+// MARK: - Packing Lists Teaser
+
+struct PackingListsTeaser: View {
+    let onTap: () -> Void
+    @EnvironmentObject var packingListStore: PackingListStore
+
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                Image(systemName: "bag.fill")
+                    .font(.system(size: 16))
+                    .foregroundColor(Theme.terracotta)
+                    .frame(width: 24)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Packing Lists")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(Theme.textPrimary)
+                    Text(packingListStore.lists.isEmpty ? "Never forget what to pack" : "\(packingListStore.lists.count) list\(packingListStore.lists.count == 1 ? "" : "s")")
+                        .font(.system(size: 12))
+                        .foregroundColor(Theme.textSecondary)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12))
+                    .foregroundColor(Theme.textSecondary)
+            }
+            .padding(14)
+            .background(Theme.surface)
+            .cornerRadius(12)
+        }
+        .accessibilityLabel("Packing Lists")
+    }
+}
+
+// MARK: - Planned Trips Teaser
+
+struct PlannedTripsTeaser: View {
+    let onTap: () -> Void
+    @EnvironmentObject var plannedTripStore: PlannedTripStore
+
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                Image(systemName: "calendar.badge.clock")
+                    .font(.system(size: 16))
+                    .foregroundColor(Theme.sage)
+                    .frame(width: 24)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Planned Trips")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(Theme.textPrimary)
+
+                    if let next = plannedTripStore.nextTrip {
+                        Text("\(next.name) in \(next.daysUntilStart) days")
+                            .font(.system(size: 12))
+                            .foregroundColor(Theme.terracotta)
+                    } else if !plannedTripStore.plannedTrips.isEmpty {
+                        Text("\(plannedTripStore.plannedTrips.count) trip\(plannedTripStore.plannedTrips.count == 1 ? "" : "s") planned")
+                            .font(.system(size: 12))
+                            .foregroundColor(Theme.textSecondary)
+                    } else {
+                        Text("Plan your next adventure")
+                            .font(.system(size: 12))
+                            .foregroundColor(Theme.textSecondary)
+                    }
+                }
+
+                Spacer()
+
+                if let next = plannedTripStore.nextTrip {
+                    Text("\(next.daysUntilStart)d")
+                        .font(.system(size: 13, weight: .bold, design: .monospaced))
+                        .foregroundColor(Theme.terracotta)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 4)
+                        .background(Theme.terracotta.opacity(0.15))
+                        .cornerRadius(6)
+                }
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12))
+                    .foregroundColor(Theme.textSecondary)
+            }
+            .padding(14)
+            .background(Theme.surface)
+            .cornerRadius(12)
+        }
+        .accessibilityLabel("Planned Trips")
     }
 }

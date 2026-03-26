@@ -6,6 +6,8 @@ struct PerchApp: App {
     @StateObject private var locationService = LocationService()
     @StateObject private var templateStore = TemplateStore()
     @StateObject private var detectionManager = TravelDetectionManager()
+    @StateObject private var packingListStore = PackingListStore()
+    @StateObject private var plannedTripStore = PlannedTripStore()
 
     var body: some Scene {
         WindowGroup {
@@ -14,6 +16,8 @@ struct PerchApp: App {
                 .environmentObject(locationService)
                 .environmentObject(templateStore)
                 .environmentObject(detectionManager)
+                .environmentObject(packingListStore)
+                .environmentObject(plannedTripStore)
                 .preferredColorScheme(.dark)
         }
     }

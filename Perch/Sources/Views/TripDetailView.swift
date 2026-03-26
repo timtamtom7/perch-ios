@@ -5,9 +5,11 @@ struct TripDetailView: View {
     let trip: Trip
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var tripStore: TripStore
+    @EnvironmentObject var packingListStore: PackingListStore
     @State private var region: MKCoordinateRegion = MKCoordinateRegion()
     @State private var showingDiary = false
     @State private var showingPrivacy = false
+    @State private var showingPackingList = false
 
     var body: some View {
         NavigationStack {
@@ -25,6 +27,10 @@ struct TripDetailView: View {
                     HStack(spacing: 12) {
                         ActionButton(icon: "book.fill", label: "Diary") {
                             showingDiary = true
+                        }
+
+                        ActionButton(icon: "bag.fill", label: "Packing") {
+                            showingPackingList = true
                         }
 
                         ActionButton(icon: trip.isPrivate ? "lock.fill" : "globe", label: trip.isPrivate ? "Private" : "Public") {
@@ -73,6 +79,9 @@ struct TripDetailView: View {
             }
             .sheet(isPresented: $showingPrivacy) {
                 TripPrivacyView(trip: trip)
+            }
+            .sheet(isPresented: $showingPackingList) {
+                TripPackingListSheet(trip: trip)
             }
         }
     }
@@ -359,5 +368,64 @@ struct CityConnector: View {
                 .padding(.leading, 4)
             Spacer()
         }
+    }
+}
+
+// MARK: - Trip Packing List Sheet
+
+struct TripPackingListSheet: View {
+    let trip: Trip
+    @EnvironmentObject var packingListStore: PackingListStore
+    @Environment(\.dismiss) private var dismiss
+    @State private var targetList: PackingList?
+
+    var body: some View {
+        NavigationStack {
+            Group {
+                if let list = targetList {
+                    PackingListView(packingList: list)
+                } else {
+                    creatingView
+                }
+            }
+            .background(Theme.background)
+            .navigationTitle("Packing List")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") { dismiss() }
+                        .foregroundColor(Theme.terracotta)
+                }
+            }
+            .onAppear {
+                loadOrCreateList()
+            }
+        }
+    }
+
+    private var creatingView: some View {
+        VStack(spacing: 16) {
+            ProgressView()
+                .tint(Theme.terracotta)
+            Text("Setting up packing list…")
+                .font(.system(size: 14))
+                .foregroundColor(Theme.textSecondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func loadOrCreateList() {
+        if let existing = packingListStore.list(forTripId: trip.id) {
+            targetList = existing
+        } else {
+            let listName = tripPrimaryLabel.isEmpty ? "Packing List" : "Packing — \(tripPrimaryLabel)"
+            if let newList = packingListStore.createList(name: listName, tripId: trip.id, items: nil) {
+                targetList = newList
+            }
+        }
+    }
+
+    private var tripPrimaryLabel: String {
+        trip.cities.first ?? trip.name
     }
 }
