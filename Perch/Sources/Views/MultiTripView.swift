@@ -207,7 +207,7 @@ struct ActiveTripRow: View {
                 .background(Theme.surfaceElevated)
             }
             .background(Theme.surface)
-            .cornerRadius(16)
+            .cornerRadius(Theme.cornerRadiusLarge)
         }
         .onAppear {
             updateDuration()
@@ -251,7 +251,7 @@ struct MultiTripDetailSheet: View {
                     if !trip.visits.isEmpty {
                         TripMapPreview(visits: trip.visits)
                             .frame(height: 200)
-                            .cornerRadius(16)
+                            .cornerRadius(Theme.cornerRadiusLarge)
                     }
 
                     // Stats

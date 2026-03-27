@@ -175,9 +175,9 @@ struct TripCountdownCard: View {
                     endPoint: .bottomTrailing
                 )
             )
-            .cornerRadius(16)
+            .cornerRadius(Theme.cornerRadiusLarge)
             .overlay(
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge)
                     .stroke(Theme.terracotta.opacity(0.3), lineWidth: 1)
             )
         }
@@ -250,7 +250,7 @@ struct PlannedTripRow: View {
                             .font(.system(size: 17, weight: .bold, design: .rounded))
                             .foregroundColor(Theme.terracotta)
                         Text("days")
-                            .font(.system(size: 10))
+                            .font(.caption2)
                             .foregroundColor(Theme.textSecondary)
                     }
                 }
@@ -261,7 +261,7 @@ struct PlannedTripRow: View {
             }
             .padding(14)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
         .contextMenu {
             Button(role: .destructive) {
@@ -380,7 +380,7 @@ struct PlannedTripDetailView: View {
                 endPoint: .bottom
             )
         )
-        .cornerRadius(16)
+        .cornerRadius(Theme.cornerRadiusLarge)
     }
 
     private var tripDetailsCard: some View {
@@ -396,7 +396,7 @@ struct PlannedTripDetailView: View {
             }
         }
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 
     private var destinationsCard: some View {
@@ -437,7 +437,7 @@ struct PlannedTripDetailView: View {
         }
         .padding(14)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 
     private var weatherPreview: some View {
@@ -467,7 +467,7 @@ struct PlannedTripDetailView: View {
                 .foregroundColor(Theme.textPrimary)
                 .padding(14)
                 .background(Theme.surface)
-                .cornerRadius(12)
+                .cornerRadius(Theme.cornerRadiusMedium)
             }
             .sheet(isPresented: $showingWeather) {
                 PlannedTripWeatherView(trip: trip)
@@ -494,7 +494,7 @@ struct PlannedTripDetailView: View {
         }
         .padding(14)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 
     private func detailRow(icon: String, label: String, value: String) -> some View {
@@ -612,7 +612,7 @@ struct DestinationWeatherCard: View {
         }
         .padding(16)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
         .task {
             await loadWeather()
         }
@@ -687,7 +687,7 @@ struct DestinationWeatherPlaceholder: View {
         }
         .padding(16)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 }
 
@@ -860,7 +860,7 @@ struct NewPlannedTripSheet: View {
                             .foregroundColor(Theme.textPrimary)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                             .focused($isNameFocused)
                     }
 
@@ -875,14 +875,14 @@ struct NewPlannedTripSheet: View {
                             .tint(Theme.terracotta)
                             .padding(10)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
 
                         DatePicker("End", selection: $endDate, in: startDate..., displayedComponents: .date)
                             .datePickerStyle(.compact)
                             .tint(Theme.terracotta)
                             .padding(10)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
 
                         Text("Duration: \(totalDays) days")
                             .font(.system(size: 13))
@@ -912,7 +912,7 @@ struct NewPlannedTripSheet: View {
                             }
                             .padding(10)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                         }
 
                         HStack(spacing: 8) {
@@ -921,14 +921,14 @@ struct NewPlannedTripSheet: View {
                                 .foregroundColor(Theme.textPrimary)
                                 .padding(10)
                                 .background(Theme.surfaceElevated)
-                                .cornerRadius(8)
+                                .cornerRadius(Theme.cornerRadiusSmall)
 
                             TextField("Country (optional)", text: $destinationCountry)
                                 .font(.system(size: 14))
                                 .foregroundColor(Theme.textPrimary)
                                 .padding(10)
                                 .background(Theme.surfaceElevated)
-                                .cornerRadius(8)
+                                .cornerRadius(Theme.cornerRadiusSmall)
 
                             Button {
                                 addDestination()
@@ -967,7 +967,7 @@ struct NewPlannedTripSheet: View {
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, 10)
                                     .background(transportMode == mode ? Theme.terracotta : Theme.surfaceElevated)
-                                    .cornerRadius(8)
+                                    .cornerRadius(Theme.cornerRadiusSmall)
                                 }
                             }
                         }
@@ -985,7 +985,7 @@ struct NewPlannedTripSheet: View {
                             .lineLimit(3...5)
                             .padding(10)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                     }
                 }
                 .padding(16)

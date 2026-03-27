@@ -24,7 +24,7 @@ struct TripTemplateCardView: View {
                             .foregroundColor(Theme.terracotta)
                             .frame(width: 20, height: 20)
                             .background(Theme.terracotta.opacity(0.15))
-                            .cornerRadius(6)
+                            .cornerRadius(Theme.cornerRadiusPill)
 
                         Text(template.tripType.displayName)
                             .font(.system(size: 11, weight: .semibold))
@@ -43,12 +43,12 @@ struct TripTemplateCardView: View {
 
                 if template.id < 0 {
                     Text("Pre-built")
-                        .font(.system(size: 10, weight: .semibold))
+                        .font(.caption2)
                         .foregroundColor(Theme.textSecondary)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 3)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(6)
+                        .cornerRadius(Theme.cornerRadiusPill)
                 }
             }
 
@@ -119,7 +119,7 @@ struct TripTemplateCardView: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
                         .background(Theme.terracotta)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                     }
                     .padding(.top, 12)
                 }
@@ -142,9 +142,9 @@ struct TripTemplateCardView: View {
         }
         .padding(16)
         .background(Theme.surface)
-        .cornerRadius(16)
+        .cornerRadius(Theme.cornerRadiusLarge)
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge)
                 .stroke(borderColor, lineWidth: template.id < 0 ? 0 : 1)
         )
     }
@@ -191,7 +191,7 @@ struct MetaTag: View {
 struct TripTemplateCardPlaceholder: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            RoundedRectangle(cornerRadius: 6)
+            RoundedRectangle(cornerRadius: Theme.cornerRadiusPill)
                 .fill(Theme.surfaceElevated)
                 .frame(width: 60, height: 20)
 
@@ -206,7 +206,7 @@ struct TripTemplateCardPlaceholder: View {
         }
         .padding(16)
         .background(Theme.surface.opacity(0.5))
-        .cornerRadius(16)
+        .cornerRadius(Theme.cornerRadiusLarge)
         .redacted(reason: .placeholder)
     }
 }

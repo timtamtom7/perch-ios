@@ -18,7 +18,7 @@ struct TripDetailView: View {
                     // Map
                     TripMapView(visits: trip.visits, region: $region)
                         .frame(height: 280)
-                        .cornerRadius(16)
+                        .cornerRadius(Theme.cornerRadiusLarge)
 
                     // Stats row
                     TripStatsRow(trip: trip)
@@ -133,7 +133,7 @@ struct ActionButton: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)
             .background(Theme.surface)
-            .cornerRadius(10)
+            .cornerRadius(Theme.cornerRadiusSmall)
         }
     }
 }
@@ -162,7 +162,7 @@ struct TripNotesView: View {
         }
         .padding(14)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 }
 
@@ -180,7 +180,7 @@ struct TemplateSourceBadge: View {
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
         .background(Theme.sage.opacity(0.1))
-        .cornerRadius(8)
+        .cornerRadius(Theme.cornerRadiusSmall)
     }
 }
 

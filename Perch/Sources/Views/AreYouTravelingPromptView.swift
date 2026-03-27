@@ -83,11 +83,11 @@ struct AreYouTravelingPromptView: View {
                             Text("Yes, Start Trip")
                         }
                         .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(Theme.background)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 14)
                         .background(Theme.terracotta)
-                        .cornerRadius(12)
+                        .cornerRadius(Theme.cornerRadiusMedium)
                     }
                     
                     HStack(spacing: 12) {
@@ -100,7 +100,7 @@ struct AreYouTravelingPromptView: View {
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 12)
                                 .background(Theme.surfaceElevated)
-                                .cornerRadius(10)
+                                .cornerRadius(Theme.cornerRadiusSmall)
                         }
                         
                         Button {
@@ -108,11 +108,11 @@ struct AreYouTravelingPromptView: View {
                         } label: {
                             Text("No, I'm home")
                                 .font(.system(size: 15))
-                                .foregroundColor(.white)
+                                .foregroundColor(Theme.textPrimary)
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 12)
                                 .background(Theme.textSecondary.opacity(0.4))
-                                .cornerRadius(10)
+                                .cornerRadius(Theme.cornerRadiusSmall)
                         }
                     }
                 }
@@ -169,7 +169,7 @@ struct TransportModeButton: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)
             .background(isSelected ? Theme.terracotta : Theme.surfaceElevated)
-            .cornerRadius(10)
+            .cornerRadius(Theme.cornerRadiusSmall)
         }
     }
 }
@@ -199,7 +199,7 @@ struct StartTripInfoSheet: View {
                         .foregroundColor(Theme.textPrimary)
                         .padding(14)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(10)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                 }
                 
                 // Transport mode
@@ -238,11 +238,11 @@ struct StartTripInfoSheet: View {
                 } label: {
                     Text("Start Trip")
                         .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(Theme.background)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
                         .background(Theme.terracotta)
-                        .cornerRadius(12)
+                        .cornerRadius(Theme.cornerRadiusMedium)
                 }
             }
             .padding(20)
@@ -298,7 +298,7 @@ struct AutoEndTripBanner: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                 }
                 
                 Button {
@@ -306,19 +306,19 @@ struct AutoEndTripBanner: View {
                 } label: {
                     Text("End Trip")
                         .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(Theme.background)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
                         .background(Theme.terracotta)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                 }
             }
         }
         .padding(14)
         .background(Theme.sage.opacity(0.12))
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: Theme.cornerRadiusMedium)
                 .stroke(Theme.sage.opacity(0.3), lineWidth: 1)
         )
     }

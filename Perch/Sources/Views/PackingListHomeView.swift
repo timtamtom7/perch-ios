@@ -104,7 +104,7 @@ struct PackingListHomeView: View {
                     }
                     .padding(14)
                     .background(Theme.terracotta.opacity(0.1))
-                    .cornerRadius(12)
+                    .cornerRadius(Theme.cornerRadiusMedium)
                 }
                 .accessibilityLabel("Create packing list for active trip")
             }
@@ -136,7 +136,7 @@ struct PackingListHomeView: View {
                         }
                         .padding(14)
                         .background(Theme.surface)
-                        .cornerRadius(12)
+                        .cornerRadius(Theme.cornerRadiusMedium)
                     }
                 }
             }
@@ -166,7 +166,7 @@ struct PackingListHomeView: View {
                 }
                 .padding(14)
                 .background(Theme.surface)
-                .cornerRadius(12)
+                .cornerRadius(Theme.cornerRadiusMedium)
             }
         }
     }
@@ -325,7 +325,7 @@ struct PackingListCard: View {
                             .foregroundColor(Theme.sage)
                     } else {
                         Text("\(Int(list.progress * 100))%")
-                            .font(.system(size: 10, weight: .semibold, design: .monospaced))
+                            .font(.caption2)
                             .foregroundColor(Theme.textSecondary)
                     }
                 }
@@ -349,7 +349,7 @@ struct PackingListCard: View {
             }
             .padding(14)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
         .contextMenu {
             Button(role: .destructive) {
@@ -413,14 +413,14 @@ struct PackingTemplateCard: View {
                         .padding(.horizontal, 14)
                         .padding(.vertical, 7)
                         .background(Theme.terracotta.opacity(0.15))
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                 }
                 .accessibilityLabel("Use template \(template.name)")
             }
             .padding(14)
         }
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
         .contextMenu {
             Button(role: .destructive) {
                 showingDeleteAlert = true
@@ -463,7 +463,7 @@ struct NewPackingListSheet: View {
                             .foregroundColor(Theme.textPrimary)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                             .focused($isNameFocused)
                     }
 
@@ -495,7 +495,7 @@ struct NewPackingListSheet: View {
                                 }
                                 .padding(12)
                                 .background(selectedTripId == trip.id ? Theme.terracotta.opacity(0.08) : Theme.surfaceElevated)
-                                .cornerRadius(8)
+                                .cornerRadius(Theme.cornerRadiusSmall)
                             }
                         }
 
@@ -506,7 +506,7 @@ struct NewPackingListSheet: View {
                                 .padding(12)
                                 .frame(maxWidth: .infinity)
                                 .background(Theme.surfaceElevated)
-                                .cornerRadius(8)
+                                .cornerRadius(Theme.cornerRadiusSmall)
                         }
                     }
 
@@ -544,7 +544,7 @@ struct NewPackingListSheet: View {
                                     }
                                     .padding(12)
                                     .background(Theme.surfaceElevated)
-                                    .cornerRadius(8)
+                                    .cornerRadius(Theme.cornerRadiusSmall)
                                 }
                             }
                         }

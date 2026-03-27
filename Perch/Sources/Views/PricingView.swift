@@ -68,7 +68,7 @@ struct PricingView: View {
 
                         HStack(spacing: 4) {
                             Image(systemName: "lock.fill")
-                                .font(.system(size: 10))
+                                .font(.caption2)
                             Text("Payments handled by Apple. Cancel anytime.")
                                 .font(.system(size: 12))
                         }
@@ -162,9 +162,9 @@ struct FreePlanCard: View {
             .padding(20)
         }
         .background(Theme.surface)
-        .cornerRadius(16)
+        .cornerRadius(Theme.cornerRadiusLarge)
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge)
                 .stroke(Theme.divider, lineWidth: 1)
         )
     }
@@ -204,9 +204,9 @@ struct WanderPlanCard: View {
                             .padding(.horizontal, 16)
                             .padding(.vertical, 8)
                             .background(isSelected ? Theme.terracotta : Color.clear)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                             .overlay(
-                                RoundedRectangle(cornerRadius: 8)
+                                RoundedRectangle(cornerRadius: Theme.cornerRadiusSmall)
                                     .stroke(Theme.terracotta, lineWidth: isSelected ? 0 : 1.5)
                             )
                     }
@@ -228,9 +228,9 @@ struct WanderPlanCard: View {
             .padding(20)
         }
         .background(Theme.surface)
-        .cornerRadius(16)
+        .cornerRadius(Theme.cornerRadiusLarge)
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge)
                 .stroke(isSelected ? Theme.terracotta : Theme.divider, lineWidth: isSelected ? 2 : 1)
         )
     }
@@ -272,9 +272,9 @@ struct ExplorerPlanCard: View {
                             .padding(.horizontal, 16)
                             .padding(.vertical, 8)
                             .background(isSelected ? Theme.sage : Color.clear)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                             .overlay(
-                                RoundedRectangle(cornerRadius: 8)
+                                RoundedRectangle(cornerRadius: Theme.cornerRadiusSmall)
                                     .stroke(Theme.sage, lineWidth: isSelected ? 0 : 1.5)
                             )
                     }
@@ -301,9 +301,9 @@ struct ExplorerPlanCard: View {
                 endPoint: .bottom
             )
         )
-        .cornerRadius(16)
+        .cornerRadius(Theme.cornerRadiusLarge)
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge)
                 .stroke(isSelected ? Theme.sage : Color(hex: "c9a84c").opacity(0.3), lineWidth: isSelected ? 2 : 1.5)
         )
     }
@@ -339,18 +339,18 @@ struct CurrentBadge: View {
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
             .background(Theme.divider)
-            .cornerRadius(20)
+            .cornerRadius(Theme.cornerRadiusXLarge)
     }
 }
 
 struct PopularBadge: View {
     var body: some View {
         Text("Popular")
-            .font(.system(size: 10, weight: .bold))
+            .font(.caption2)
             .foregroundColor(Theme.background)
             .padding(.horizontal, 7)
             .padding(.vertical, 3)
             .background(Theme.terracotta)
-            .cornerRadius(10)
+            .cornerRadius(Theme.cornerRadiusSmall)
     }
 }

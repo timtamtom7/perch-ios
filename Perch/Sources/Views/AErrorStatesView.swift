@@ -75,7 +75,7 @@ struct EmptyStateView: View {
             }
             .padding(20)
             .background(Theme.surface)
-            .cornerRadius(16)
+            .cornerRadius(Theme.cornerRadiusLarge)
             .padding(.horizontal, 16)
             .padding(.bottom, 100)
         }
@@ -149,7 +149,7 @@ struct LocationPermissionDeniedView: View {
                 )
             }
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
             .padding(.horizontal, 20)
 
             Spacer()
@@ -249,7 +249,7 @@ struct NoLocationsRecordedView: View {
             }
             .padding(20)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
             .padding(.horizontal, 20)
 
             Spacer()
@@ -495,6 +495,6 @@ struct InsightCard: View {
         }
         .padding(16)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 }

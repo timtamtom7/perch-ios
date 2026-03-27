@@ -204,7 +204,7 @@ struct PackingListView: View {
             Divider()
                 .background(Theme.divider)
         }
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
         .padding(.bottom, 8)
     }
 
@@ -222,7 +222,7 @@ struct PackingListView: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
             .background(Theme.terracotta.opacity(0.1))
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
         .padding(.top, 16)
         .accessibilityLabel("Add new packing item")
@@ -348,7 +348,7 @@ struct PackingItemRow: View {
                         .foregroundColor(Theme.textPrimary)
                         .padding(8)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(6)
+                        .cornerRadius(Theme.cornerRadiusPill)
 
                     Button {
                         onUpdateNote(noteText.isEmpty ? nil : noteText)
@@ -409,7 +409,7 @@ struct AddPackingItemSheet: View {
                             .foregroundColor(Theme.textPrimary)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                             .focused($isNameFocused)
                     }
 
@@ -434,7 +434,7 @@ struct AddPackingItemSheet: View {
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 7)
                                     .background(category == cat ? Theme.terracotta : Theme.surfaceElevated)
-                                    .cornerRadius(8)
+                                    .cornerRadius(Theme.cornerRadiusSmall)
                                 }
                             }
                         }
@@ -483,7 +483,7 @@ struct AddPackingItemSheet: View {
                             .lineLimit(2...3)
                             .padding(10)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                     }
                 }
                 .padding(16)

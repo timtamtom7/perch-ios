@@ -228,7 +228,7 @@ struct OnboardingScreen3: View {
             // Year visualization — abstract trip timeline
             ZStack {
                 // Background
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: Theme.cornerRadiusXLarge)
                     .fill(Theme.surface)
                     .frame(width: 300, height: 200)
 
@@ -240,7 +240,7 @@ struct OnboardingScreen3: View {
                                 .fill(monthColor(for: month))
                                 .frame(width: 18, height: CGFloat(heightForMonth(month)))
                             Text(monthLabel(month))
-                                .font(.system(size: 9))
+                                .font(.caption2)
                                 .foregroundColor(Theme.textSecondary)
                         }
                     }
@@ -384,15 +384,15 @@ struct PrivacyBadge: View {
     var body: some View {
         HStack(spacing: 4) {
             Image(systemName: icon)
-                .font(.system(size: 10))
+                .font(.caption2)
             Text(text)
-                .font(.system(size: 10))
+                .font(.caption2)
         }
         .foregroundColor(Theme.sage)
         .padding(.horizontal, 8)
         .padding(.vertical, 5)
         .background(Theme.sage.opacity(0.15))
-        .cornerRadius(20)
+        .cornerRadius(Theme.cornerRadiusXLarge)
     }
 }
 

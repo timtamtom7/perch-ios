@@ -93,7 +93,7 @@ struct StreakStatItem: View {
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .foregroundColor(Theme.textPrimary)
             Text(label)
-                .font(.system(size: 10))
+                .font(.caption2)
                 .foregroundColor(Theme.textSecondary)
         }
         .frame(maxWidth: .infinity)
@@ -120,7 +120,7 @@ struct MonthlyHeatmapView: View {
                             .frame(height: 28)
 
                         Text(months[month - 1])
-                            .font(.system(size: 9))
+                            .font(.caption2)
                             .foregroundColor(Theme.textSecondary)
                     }
                 }
@@ -245,7 +245,7 @@ struct EquivalencePill: View {
     var body: some View {
         HStack(spacing: 4) {
             Image(systemName: icon)
-                .font(.system(size: 10))
+                .font(.caption2)
             Text(text)
                 .font(.system(size: 11))
         }
@@ -253,6 +253,6 @@ struct EquivalencePill: View {
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
         .background(Theme.surfaceElevated)
-        .cornerRadius(6)
+        .cornerRadius(Theme.cornerRadiusPill)
     }
 }

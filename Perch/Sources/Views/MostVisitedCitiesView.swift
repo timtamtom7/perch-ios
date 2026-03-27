@@ -90,7 +90,7 @@ struct CityPodiumCard: View {
         .padding(.top, 12)
         .padding(.bottom, 8)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
         .overlay(
             VStack {
                 Spacer()
@@ -194,7 +194,7 @@ struct CityRankingRow: View {
             }
         }
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 
     private var rankColor: Color {
@@ -233,7 +233,7 @@ struct InfoPill: View {
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
         .background(Theme.surfaceElevated)
-        .cornerRadius(6)
+        .cornerRadius(Theme.cornerRadiusPill)
     }
 }
 
@@ -256,6 +256,6 @@ struct EmptyCitiesRankingView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 32)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 }

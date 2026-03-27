@@ -36,7 +36,7 @@ struct SettingsView: View {
                             .padding(.horizontal, 14)
                             .padding(.vertical, 7)
                             .background(Theme.terracotta)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                         }
                     }
                     .listRowBackground(Theme.surface)

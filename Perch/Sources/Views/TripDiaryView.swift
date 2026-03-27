@@ -38,7 +38,7 @@ struct TripDiaryView: View {
                             .frame(minHeight: 100)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(12)
+                            .cornerRadius(Theme.cornerRadiusMedium)
                             .overlay(
                                 Group {
                                     if tripNotes.isEmpty {
@@ -152,7 +152,7 @@ struct CityDiaryCard: View {
                             .frame(width: 36, height: 36)
                         Text(visit.displayName.prefix(1))
                             .font(.system(size: 15, weight: .bold))
-                            .foregroundColor(.white)
+                            .foregroundColor(Theme.background)
                     }
 
                     VStack(alignment: .leading, spacing: 2) {
@@ -189,7 +189,7 @@ struct CityDiaryCard: View {
                         .frame(minHeight: 80)
                         .padding(10)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                         .overlay(
                             Group {
                                 if notes.isEmpty {
@@ -221,7 +221,7 @@ struct CityDiaryCard: View {
                                         .padding(.horizontal, 10)
                                         .padding(.vertical, 5)
                                         .background(Theme.surfaceElevated)
-                                        .cornerRadius(6)
+                                        .cornerRadius(Theme.cornerRadiusPill)
                                 }
                             }
                         }
@@ -233,7 +233,7 @@ struct CityDiaryCard: View {
         }
         .padding(14)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 
     private var formatDateRange: String {
@@ -304,7 +304,7 @@ struct TripPrivacyView: View {
                     .tint(Theme.terracotta)
                     .padding(16)
                     .background(Theme.surface)
-                    .cornerRadius(12)
+                    .cornerRadius(Theme.cornerRadiusMedium)
 
                     Button {
                         dismiss()

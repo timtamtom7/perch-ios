@@ -8,7 +8,7 @@ struct DeepTravelAnalysisView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(hex: "f8f6f2")
+                Theme.background
                     .ignoresSafeArea()
 
                 if analysisService.isAnalyzing {
@@ -29,7 +29,7 @@ struct DeepTravelAnalysisView: View {
                         }
                     } label: {
                         Image(systemName: "arrow.clockwise")
-                            .foregroundColor(Color(hex: "2d7d46"))
+                            .foregroundColor(Theme.sage)
                     }
                 }
             }
@@ -50,24 +50,24 @@ struct DeepTravelAnalysisView: View {
 
                 Circle()
                     .trim(from: 0, to: analysisService.analysisProgress)
-                    .stroke(Color(hex: "2d7d46"), style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .stroke(Theme.sage, style: StrokeStyle(lineWidth: 4, lineCap: .round))
                     .frame(width: 80, height: 80)
                     .rotationEffect(.degrees(-90))
                     .animation(.easeInOut(duration: 0.3), value: analysisService.analysisProgress)
 
                 Text("\(Int(analysisService.analysisProgress * 100))%")
                     .font(.system(size: 16, weight: .bold, design: .monospaced))
-                    .foregroundColor(Color(hex: "1a1a1a"))
+                    .foregroundColor(Theme.textPrimary)
             }
 
             VStack(spacing: 6) {
                 Text("Analyzing your travels…")
                     .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(Color(hex: "1a1a1a"))
+                    .foregroundColor(Theme.textPrimary)
 
                 Text("Discovering patterns and insights")
                     .font(.system(size: 14))
-                    .foregroundColor(Color(hex: "6b6b6b"))
+                    .foregroundColor(Theme.textSecondary)
             }
         }
     }
@@ -76,16 +76,16 @@ struct DeepTravelAnalysisView: View {
         VStack(spacing: 16) {
             Image(systemName: "airplane.circle")
                 .font(.system(size: 60))
-                .foregroundColor(Color(hex: "c0c0c0"))
+                .foregroundColor(Theme.textTertiary)
 
             VStack(spacing: 6) {
                 Text("No trips to analyze")
                     .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(Color(hex: "1a1a1a"))
+                    .foregroundColor(Theme.textPrimary)
 
                 Text("Start tracking your travels to\nuncover insights about your journeys.")
                     .font(.system(size: 14))
-                    .foregroundColor(Color(hex: "6b6b6b"))
+                    .foregroundColor(Theme.textSecondary)
                     .multilineTextAlignment(.center)
             }
 
@@ -96,10 +96,10 @@ struct DeepTravelAnalysisView: View {
             } label: {
                 Text("Analyze Now")
                     .font(.system(size: 15, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(Theme.background)
                     .frame(width: 160, height: 44)
-                    .background(Color(hex: "2d7d46"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .background(Theme.sage)
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusSmall))
             }
             .padding(.top, 8)
         }
@@ -142,33 +142,33 @@ struct DeepTravelAnalysisView: View {
         HStack(spacing: 16) {
             Image(systemName: patternIcon(pattern.type))
                 .font(.system(size: 24))
-                .foregroundColor(Color(hex: "2d7d46"))
+                .foregroundColor(Theme.sage)
                 .frame(width: 48, height: 48)
-                .background(Color(hex: "2d7d46").opacity(0.1))
+                .background(Theme.sage.opacity(0.1))
                 .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(pattern.title)
                     .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(Color(hex: "1a1a1a"))
+                    .foregroundColor(Theme.textPrimary)
 
                 Text(pattern.description)
                     .font(.system(size: 13))
-                    .foregroundColor(Color(hex: "6b6b6b"))
+                    .foregroundColor(Theme.textSecondary)
 
                 if pattern.co2Saved > 0 {
                     Text("~\(String(format: "%.0f", pattern.co2Saved)) kg CO2 saved")
                         .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(Color(hex: "2d7d46"))
+                        .foregroundColor(Theme.sage)
                 }
             }
 
             Spacer()
         }
         .padding(16)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 14))
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
+        .background(Theme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge))
+        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
     }
 
     private func patternIcon(_ type: DeepTravelAnalysisService.TravelPattern.PatternType) -> String {
@@ -193,19 +193,19 @@ struct DeepTravelAnalysisView: View {
         HStack(spacing: 16) {
             Image(systemName: insight.icon)
                 .font(.system(size: 20))
-                .foregroundColor(Color(hex: "2d7d46"))
+                .foregroundColor(Theme.sage)
                 .frame(width: 40, height: 40)
-                .background(Color(hex: "2d7d46").opacity(0.1))
+                .background(Theme.sage.opacity(0.1))
                 .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(insight.title)
                     .font(.system(size: 13))
-                    .foregroundColor(Color(hex: "6b6b6b"))
+                    .foregroundColor(Theme.textSecondary)
 
                 Text(insight.value)
                     .font(.system(size: 20, weight: .bold))
-                    .foregroundColor(Color(hex: "1a1a1a"))
+                    .foregroundColor(Theme.textPrimary)
             }
 
             Spacer()
@@ -217,13 +217,13 @@ struct DeepTravelAnalysisView: View {
                     Text(insight.comparison)
                         .font(.system(size: 12))
                 }
-                .foregroundColor(Color(hex: "6b6b6b"))
+                .foregroundColor(Theme.textSecondary)
             }
         }
         .padding(16)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 14))
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
+        .background(Theme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge))
+        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
     }
 
     private func trendIcon(_ trend: DeepTravelAnalysisService.CO2Insight.Trend) -> String {
@@ -247,44 +247,44 @@ struct DeepTravelAnalysisView: View {
         HStack(spacing: 16) {
             Image(systemName: rec.imageSystemName)
                 .font(.system(size: 24))
-                .foregroundColor(.white)
+                .foregroundColor(Theme.background)
                 .frame(width: 56, height: 56)
-                .background(LinearGradient(colors: [Color(hex: "2d7d46"), Color(hex: "4a9d5e")], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .background(LinearGradient(colors: [Theme.sage, Theme.sage], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusMedium))
 
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
                     Text(rec.destination)
                         .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(Color(hex: "1a1a1a"))
+                        .foregroundColor(Theme.textPrimary)
 
                     Text("•")
-                        .foregroundColor(Color(hex: "c0c0c0"))
+                        .foregroundColor(Theme.textTertiary)
 
                     Text(rec.country)
                         .font(.system(size: 13))
-                        .foregroundColor(Color(hex: "6b6b6b"))
+                        .foregroundColor(Theme.textSecondary)
                 }
 
                 Text(rec.reason)
                     .font(.system(size: 12))
-                    .foregroundColor(Color(hex: "6b6b6b"))
+                    .foregroundColor(Theme.textSecondary)
 
                 HStack(spacing: 4) {
                     Image(systemName: "leaf.fill")
-                        .font(.system(size: 10))
+                        .font(.caption2)
                     Text("Eco Score: \(rec.ecoScore)/100")
                         .font(.system(size: 11, weight: .medium))
                 }
-                .foregroundColor(Color(hex: "2d7d46"))
+                .foregroundColor(Theme.sage)
             }
 
             Spacer()
         }
         .padding(16)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 14))
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
+        .background(Theme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge))
+        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
     }
 }
 

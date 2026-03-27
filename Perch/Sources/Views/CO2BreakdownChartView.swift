@@ -178,7 +178,7 @@ struct CO2ModeRow: View {
         .padding(.vertical, 6)
         .padding(.horizontal, 8)
         .background(isSelected ? color.opacity(0.08) : Color.clear)
-        .cornerRadius(8)
+        .cornerRadius(Theme.cornerRadiusSmall)
     }
 
     private var formatPercent: String {
@@ -270,7 +270,7 @@ struct CO2ComparisonItem: View {
                 .font(.system(size: 17, weight: .bold, design: .rounded))
                 .foregroundColor(color)
             Text(sublabel)
-                .font(.system(size: 10))
+                .font(.caption2)
                 .foregroundColor(Theme.textSecondary)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
@@ -317,15 +317,15 @@ struct CO2GaugeView: View {
 
             HStack {
                 Text("0")
-                    .font(.system(size: 10))
+                    .font(.caption2)
                     .foregroundColor(Theme.textSecondary)
                 Spacer()
                 Text("You")
-                    .font(.system(size: 10, weight: .semibold))
+                    .font(.caption2)
                     .foregroundColor(Theme.terracotta)
                 Spacer()
                 Text("5t")
-                    .font(.system(size: 10))
+                    .font(.caption2)
                     .foregroundColor(Theme.textSecondary)
             }
 
@@ -334,7 +334,7 @@ struct CO2GaugeView: View {
                     .fill(Theme.textSecondary.opacity(0.5))
                     .frame(width: 2, height: 8)
                 Text("Average")
-                    .font(.system(size: 10))
+                    .font(.caption2)
                     .foregroundColor(Theme.textSecondary)
             }
             .frame(maxWidth: .infinity, alignment: .trailing)

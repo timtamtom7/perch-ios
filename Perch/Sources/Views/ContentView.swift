@@ -112,7 +112,7 @@ struct ContentView: View {
                 VStack(spacing: 16) {
                     Image(systemName: "suitcase")
                         .font(.system(size: 64))
-                        .foregroundColor(Theme.textTertiary)
+                        .foregroundColor(Theme.textQuaternary)
                     Text("Select a trip")
                         .font(.headline)
                         .foregroundColor(Theme.textSecondary)
@@ -266,9 +266,9 @@ struct MultipleActiveTripsBanner: View {
             }
             .padding(14)
             .background(Theme.sage.opacity(0.1))
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
             .overlay(
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: Theme.cornerRadiusMedium)
                     .stroke(Theme.sage.opacity(0.3), lineWidth: 1)
             )
         }
@@ -307,7 +307,7 @@ struct QuickInsightsTeaser: View {
             }
             .padding(14)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
     }
 
@@ -389,13 +389,13 @@ struct QuickTemplateCard: View {
                 .lineLimit(1)
 
             Text(duration)
-                .font(.system(size: 10))
+                .font(.caption2)
                 .foregroundColor(Theme.textSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 }
 
@@ -470,7 +470,7 @@ struct ActiveTripCard: View {
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                 }
             }
             .padding(.bottom, 12)
@@ -491,11 +491,11 @@ struct ActiveTripCard: View {
                 } label: {
                     Text("End Trip")
                         .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(.white)
+                        .foregroundColor(Theme.background)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
                         .background(Theme.terracotta)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                 }
             }
         }
@@ -669,7 +669,7 @@ struct PastTripRow: View {
         }
         .padding(16)
         .background(Theme.surface)
-        .cornerRadius(12)
+        .cornerRadius(Theme.cornerRadiusMedium)
     }
 
     private var tripPrimaryLabel: String {
@@ -780,7 +780,7 @@ struct PackingListsTeaser: View {
             }
             .padding(14)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
         .accessibilityLabel("Packing Lists")
     }
@@ -829,7 +829,7 @@ struct PlannedTripsTeaser: View {
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
                         .background(Theme.terracotta.opacity(0.15))
-                        .cornerRadius(6)
+                        .cornerRadius(Theme.cornerRadiusPill)
                 }
 
                 Image(systemName: "chevron.right")
@@ -838,7 +838,7 @@ struct PlannedTripsTeaser: View {
             }
             .padding(14)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
         .accessibilityLabel("Planned Trips")
     }

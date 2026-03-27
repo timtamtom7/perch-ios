@@ -7,12 +7,12 @@ struct PerchCommunityView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(hex: "f8f6f2")
+                Theme.background
                     .ignoresSafeArea()
 
                 if communityService.isLoading {
                     ProgressView()
-                        .tint(Color(hex: "2d7d46"))
+                        .tint(Theme.sage)
                         .scaleEffect(1.5)
                 } else {
                     communityContent
@@ -46,31 +46,31 @@ struct PerchCommunityView: View {
                     Text(trip.anonymousId)
                         .font(.system(size: 12, weight: .medium))
                 }
-                .foregroundColor(Color(hex: "6b6b6b"))
+                .foregroundColor(Theme.textSecondary)
 
                 Spacer()
 
                 Text(timeAgo(trip.createdAt))
                     .font(.system(size: 11))
-                    .foregroundColor(Color(hex: "999999"))
+                    .foregroundColor(Theme.textTertiary)
             }
 
             HStack {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(trip.destination)
                         .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color(hex: "1a1a1a"))
+                        .foregroundColor(Theme.textPrimary)
 
                     Text(trip.country)
                         .font(.system(size: 13))
-                        .foregroundColor(Color(hex: "6b6b6b"))
+                        .foregroundColor(Theme.textSecondary)
                 }
 
                 Spacer()
 
                 Image(systemName: "leaf.fill")
                     .font(.system(size: 24))
-                    .foregroundColor(Color(hex: "2d7d46"))
+                    .foregroundColor(Theme.sage)
             }
 
             Divider()
@@ -79,28 +79,28 @@ struct PerchCommunityView: View {
                 VStack(spacing: 2) {
                     Text(trip.transportMode.capitalized)
                         .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(Color(hex: "1a1a1a"))
+                        .foregroundColor(Theme.textPrimary)
                     Text("Transport")
-                        .font(.system(size: 10))
-                        .foregroundColor(Color(hex: "999999"))
+                        .font(.caption2)
+                        .foregroundColor(Theme.textTertiary)
                 }
 
                 VStack(spacing: 2) {
                     Text("\(String(format: "%.0f", trip.distance)) km")
                         .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(Color(hex: "1a1a1a"))
+                        .foregroundColor(Theme.textPrimary)
                     Text("Distance")
-                        .font(.system(size: 10))
-                        .foregroundColor(Color(hex: "999999"))
+                        .font(.caption2)
+                        .foregroundColor(Theme.textTertiary)
                 }
 
                 VStack(spacing: 2) {
                     Text("\(String(format: "%.1f", trip.co2)) kg")
                         .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(Color(hex: "2d7d46"))
+                        .foregroundColor(Theme.sage)
                     Text("CO2")
-                        .font(.system(size: 10))
-                        .foregroundColor(Color(hex: "999999"))
+                        .font(.caption2)
+                        .foregroundColor(Theme.textTertiary)
                 }
 
                 Spacer()
@@ -115,9 +115,9 @@ struct PerchCommunityView: View {
             }
         }
         .padding(16)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 14))
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
+        .background(Theme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge))
+        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
     }
 
     private func timeAgo(_ date: Date) -> String {

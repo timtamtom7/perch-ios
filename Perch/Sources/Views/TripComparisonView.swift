@@ -138,7 +138,7 @@ struct ComparisonCard: View {
                         .foregroundColor(diffColor)
 
                     Text(diffLabel)
-                        .font(.system(size: 10))
+                        .font(.caption2)
                         .foregroundColor(Theme.textSecondary)
                         .multilineTextAlignment(.center)
                         .frame(width: 60)
@@ -308,7 +308,7 @@ struct TripComparisonEntryView: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background(Theme.terracotta.opacity(0.12))
-            .cornerRadius(8)
+            .cornerRadius(Theme.cornerRadiusSmall)
         }
         .alert("Trip Comparison Failed", isPresented: $showingError) {
             Button("OK", role: .cancel) {}

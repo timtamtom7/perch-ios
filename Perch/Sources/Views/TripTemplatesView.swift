@@ -85,7 +85,7 @@ struct TripTemplatesView: View {
                             .padding(16)
                             .frame(maxWidth: .infinity)
                             .background(Theme.surface)
-                            .cornerRadius(12)
+                            .cornerRadius(Theme.cornerRadiusMedium)
                         } else {
                             ForEach(pastTrips.prefix(3)) { trip in
                                 SaveTripAsTemplateRow(trip: trip) { success in
@@ -167,7 +167,7 @@ struct SaveTripAsTemplateRow: View {
             }
             .padding(14)
             .background(Theme.surface)
-            .cornerRadius(12)
+            .cornerRadius(Theme.cornerRadiusMedium)
         }
         .sheet(isPresented: $showingSheet) {
             SaveTemplateSheet(trip: trip, onSave: onSave)
@@ -210,7 +210,7 @@ struct SaveTemplateSheet: View {
                             .foregroundColor(Theme.textPrimary)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                     }
 
                     VStack(alignment: .leading, spacing: 8) {
@@ -231,7 +231,7 @@ struct SaveTemplateSheet: View {
                         }
                         .padding(12)
                         .background(Theme.surfaceElevated)
-                        .cornerRadius(8)
+                        .cornerRadius(Theme.cornerRadiusSmall)
                     }
 
                     VStack(alignment: .leading, spacing: 8) {
@@ -254,7 +254,7 @@ struct SaveTemplateSheet: View {
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 8)
                                     .background(tripType == type ? Theme.terracotta : Theme.surfaceElevated)
-                                    .cornerRadius(8)
+                                    .cornerRadius(Theme.cornerRadiusSmall)
                                 }
                             }
                         }
@@ -285,7 +285,7 @@ struct SaveTemplateSheet: View {
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, 10)
                                     .background(transportMode == mode ? Theme.terracotta : Theme.surfaceElevated)
-                                    .cornerRadius(8)
+                                    .cornerRadius(Theme.cornerRadiusSmall)
                                 }
                             }
                         }
@@ -302,7 +302,7 @@ struct SaveTemplateSheet: View {
                             .lineLimit(3...5)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                     }
                 }
                 .padding(16)
@@ -403,7 +403,7 @@ struct UseTemplateSheet: View {
                             .foregroundColor(Theme.textPrimary)
                             .padding(12)
                             .background(Theme.surfaceElevated)
-                            .cornerRadius(8)
+                            .cornerRadius(Theme.cornerRadiusSmall)
                     }
 
                     VStack(spacing: 12) {

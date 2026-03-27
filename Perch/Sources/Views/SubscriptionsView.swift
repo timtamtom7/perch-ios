@@ -44,7 +44,7 @@ struct PerchSubscriptionsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(hex: "f8f6f2")
+                Theme.background
                     .ignoresSafeArea()
 
                 ScrollView {
@@ -66,16 +66,16 @@ struct PerchSubscriptionsView: View {
         VStack(spacing: 12) {
             Image(systemName: "crown.fill")
                 .font(.system(size: 48))
-                .foregroundColor(Color(hex: "f5a623"))
+                .foregroundColor(Theme.terracotta)
 
             VStack(spacing: 8) {
                 Text("Unlock Premium Features")
                     .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(Color(hex: "1a1a1a"))
+                    .foregroundColor(Theme.textPrimary)
 
                 Text("Get unlimited trips, advanced insights, and export features.")
                     .font(.system(size: 15))
-                    .foregroundColor(Color(hex: "6b6b6b"))
+                    .foregroundColor(Theme.textSecondary)
                     .multilineTextAlignment(.center)
             }
         }
@@ -96,15 +96,15 @@ struct PerchSubscriptionsView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(plan.rawValue)
                         .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color(hex: "1a1a1a"))
+                        .foregroundColor(Theme.textPrimary)
 
                     HStack(spacing: 4) {
                         Text(plan.price)
                             .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(Color(hex: "2d7d46"))
+                            .foregroundColor(Theme.sage)
                         Text(plan.period)
                             .font(.system(size: 14))
-                            .foregroundColor(Color(hex: "6b6b6b"))
+                            .foregroundColor(Theme.textSecondary)
                     }
                 }
 
@@ -119,11 +119,11 @@ struct PerchSubscriptionsView: View {
                     HStack(spacing: 8) {
                         Image(systemName: "checkmark.circle.fill")
                             .font(.system(size: 14))
-                            .foregroundColor(Color(hex: "2d7d46"))
+                            .foregroundColor(Theme.sage)
 
                         Text(feature)
                             .font(.system(size: 14))
-                            .foregroundColor(Color(hex: "4a4a4a"))
+                            .foregroundColor(Theme.textSecondary)
                     }
                 }
             }
@@ -134,25 +134,25 @@ struct PerchSubscriptionsView: View {
             } label: {
                 Text("Subscribe")
                     .font(.system(size: 15, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(Theme.background)
                     .frame(maxWidth: .infinity)
                     .frame(height: 44)
-                    .background(Color(hex: "2d7d46"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .background(Theme.sage)
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusSmall))
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 16)
         }
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
+        .background(Theme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge))
+        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
     }
 
     private var faqSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("FAQ")
                 .font(.system(size: 18, weight: .bold))
-                .foregroundColor(Color(hex: "1a1a1a"))
+                .foregroundColor(Theme.textPrimary)
 
             VStack(spacing: 0) {
                 faqRow(question: "Can I cancel anytime?", answer: "Yes, you can cancel your subscription at any time.")
@@ -161,8 +161,8 @@ struct PerchSubscriptionsView: View {
                 Divider()
                 faqRow(question: "Is there a free trial?", answer: "Yes, new subscribers get a 7-day free trial.")
             }
-            .background(Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .background(Theme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadiusLarge))
         }
     }
 
@@ -170,11 +170,11 @@ struct PerchSubscriptionsView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(question)
                 .font(.system(size: 15, weight: .medium))
-                .foregroundColor(Color(hex: "1a1a1a"))
+                .foregroundColor(Theme.textPrimary)
 
             Text(answer)
                 .font(.system(size: 13))
-                .foregroundColor(Color(hex: "6b6b6b"))
+                .foregroundColor(Theme.textSecondary)
         }
         .padding(14)
     }
