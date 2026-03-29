@@ -162,9 +162,14 @@ struct BirdSightingsView: View {
 struct FilterChip: View {
     let title: String
     let isActive: Bool
+    var icon: String? = nil
 
     var body: some View {
         HStack(spacing: 4) {
+            if let icon = icon {
+                Image(systemName: icon)
+                    .font(.system(size: 10))
+            }
             Text(title)
                 .font(.system(size: 12, weight: .medium))
 
