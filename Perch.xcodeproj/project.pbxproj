@@ -7,206 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0148102DE81283AC055F8B75 /* StartTripInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12799A47C1915EC77F5114B /* StartTripInfoView.swift */; };
-		0F6CEBC3A92F003599305527 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140785BDCFCE4565A3525209 /* ContentView.swift */; };
-		12BE91030EBC76002D23F336 /* AErrorStatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374795D01E9C9B148079A1A /* AErrorStatesView.swift */; };
-		28B4F682D56F7787503745D2 /* TripTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AC6D83A486D087B22B2B5 /* TripTemplate.swift */; };
-		2F4EE32D226AA5066FB96495 /* PDFExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4B1D228B31C9323F70690 /* PDFExportService.swift */; };
-		3A57E302CDD878A0E233204F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD209C26A6995661E05F8CAA /* Trip.swift */; };
-		45BAACF0F3C3284A865BFB71 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED7709C7BD8D2323B78D37B /* CommunityView.swift */; };
-		4D7DCC3193D552C52CBD9E16 /* PerchR12R20Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0785397196E09AFAC2383CB /* PerchR12R20Service.swift */; };
-		52230FEB66110A31361A27D0 /* TripTemplateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */; };
-		549B61A7A33A602AB2C796A2 /* TravelInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */; };
-		5A05394609CF5C22D1598AB3 /* CO2BreakdownChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */; };
-		5C0117D8B0BD275E67EF4482 /* MostVisitedCitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */; };
-		5E71970442CD4A50368476E4 /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE376BA0C52C9FD1332BC67 /* PricingView.swift */; };
-		65FAF231F4745D15368B1CEA /* FlightTrackerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E963923257D6F2983FF7FA /* FlightTrackerService.swift */; };
-		6EB088D6D49014E35F8B0DAA /* DeepTravelAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D960343B9187DC308C73FCF7 /* DeepTravelAnalysisView.swift */; };
-		713152E6ED795FD01191A7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E8CBC8C80D5DE5148AC46 /* Assets.xcassets */; };
-		7B278D70A4235636E9D56746 /* CrossDeviceSyncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBC686DE0611D404E0A900 /* CrossDeviceSyncView.swift */; };
-		7BA24261CE5EB692A275142B /* CrossDeviceSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05DA3F819AAF8E839BF063 /* CrossDeviceSyncService.swift */; };
-		7F070433B11120EB3B10C1D1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D930460BDFCD3421AB028E /* OnboardingView.swift */; };
-		98FDF67656AFD6EB08DC0140 /* TripTemplatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78818E05940FFBF3217C7AA2 /* TripTemplatesView.swift */; };
-		A05090E84B7CD15E07DBDE0B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 07BAF518E608435A38F6CB8B /* SQLite */; };
-		A79E7A21D50FC5F65E500085 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79DC3E44614762374E1484 /* TripDetailView.swift */; };
-		A88908FEAE9A390E6C6555A6 /* TripDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57612FFE2B174530BD42CE /* TripDiaryView.swift */; };
-		AC5C50D5246BB7747C6DCF20 /* TravelDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */; };
-		B2ED9585D8893E87AA2F2E95 /* AreYouTravelingPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */; };
-		B54C4BA35AE3E382135FC36C /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EBFF35E1B85705554C627 /* TripStore.swift */; };
-		B68F87D44CF1975308E03D6D /* TripComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */; };
-		BA7CB1F9D74C1668DE94105F /* TravelStreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83806C51C7FF96A14D405117 /* TravelStreaksView.swift */; };
-		CC358F3F30A312C55E8930F1 /* DeepTravelAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2F322560F9C955BF05810 /* DeepTravelAnalysisService.swift */; };
-		CF2068124BC0352981D1ABDE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180D1F5DE37968ADDFD80B4 /* Theme.swift */; };
-		D30AEDA5D893DFB9F4B66A50 /* PerchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BBD04AC583769A3D2ECA0 /* PerchApp.swift */; };
-		D479F496DBBBE1F84C022632 /* PerchR12R20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55395AE5A3EA83C7975254F7 /* PerchR12R20.swift */; };
-		DF442B43C75BDB3DE525A19A /* SubscriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D86F652262DA7026FB6D03 /* SubscriptionsView.swift */; };
-		DFA053AD1002F4D15CE16388 /* TemplateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */; };
-		E47C1A3C0636CB757F1020E9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D12490AFD56DBFAA859A16 /* SampleData.swift */; };
-		E61674E2751D4E2A87F7EF20 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5155EAAB4C6323F4FE3E61 /* SettingsView.swift */; };
-		E81B78FFE638B45B43CF66BF /* MultiTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB0F0AAA121A9595AB15F9 /* MultiTripView.swift */; };
-		F87D96C1748650047B37E77C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D428344B2A0972E70C3F755D /* LocationService.swift */; };
-		F943B7C613E03FFD9FA3D77D /* CO2Estimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */; };
-		F9A955CEB7C0ECBED1D4D459 /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86C8E61910AD4F289432584 /* CommunityService.swift */; };
-		AE5F3C2A12345678001122338 /* PackingListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F3C2A12345678001122334 /* PackingListStore.swift */; };
-		AE6F3C2A12345678001122339 /* PackingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F3C2A12345678001122335 /* PackingList.swift */; };
-		AE7F3C2A1234567800112233A /* PackingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F3C2A12345678001122336 /* PackingListView.swift */; };
-		AE8F3C2A1234567800112233B /* PackingListHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4F3C2A12345678001122337 /* PackingListHomeView.swift */; };
-
-		AF3F3C2A12345678001122342 /* PlannedTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1F3C2A12345678001122340 /* PlannedTripsView.swift */; };
-		AF4F3C2A12345678001122343 /* PlannedTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F3C2A12345678001122341 /* PlannedTrip.swift */; };
-
+		04524923AD4053DDE1181F04 /* BirdSightingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF211001FE68571C4B8CE1 /* BirdSightingsView.swift */; };
+		113F7F55BE6960E89A601371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE2850954D5E020A948A9C /* ContentView.swift */; };
+		19011216E650F7E6E16BFC6B /* PerchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A273FDF288DDD755E9D97E33 /* PerchApp.swift */; };
+		19D73C9110902F6231B5710D /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D08DDF8430E489F3AC420C8 /* ProgressRingView.swift */; };
+		22EB8B24268F513227BD3092 /* SightingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C3F290C11C016DE591A78 /* SightingsViewModel.swift */; };
+		43419DBBFAA9A7474A23716E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D5083ED2EA9CA77CD69447 /* Assets.xcassets */; };
+		4B056EB376861ABB13DD3F10 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54996F15AAAE69FAC6E2C548 /* Theme.swift */; };
+		4D8AC9E657EF9C6A78B0AA50 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C0A37D8FCFF7F1A946B92 /* Models.swift */; };
+		525C3C1BB2F334229A4E7638 /* FilterChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B0F28B575365A86A10925 /* FilterChipView.swift */; };
+		5BB26D1D0C0E958B001928E0 /* SpeciesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB49AE17603B25E6F1168F /* SpeciesRowView.swift */; };
+		696936152FFEDF43F8E55775 /* SpeciesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5808841C22C7A032B3919 /* SpeciesDataService.swift */; };
+		7CF665310B69550D0DFA8A52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79934F4A2517980D17272DC5 /* HomeView.swift */; };
+		949BE79B70359F58826CC44C /* SpeciesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546DB86868F13B34E0D21FF /* SpeciesDetailView.swift */; };
+		9DB6B47E758C87321B5E0905 /* AddSightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB331BED5B021DDE8ACC5734 /* AddSightingView.swift */; };
+		B0F19B8B01E2794E1AC6F8FF /* LifeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6540867C6401F8DF08F76 /* LifeListViewModel.swift */; };
+		B32F53C9B78222A792378222 /* LifeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187FC2A04B4D852BE84AF6D /* LifeListView.swift */; };
+		C8956E9AC696A23E082CEE24 /* SpeciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37532DE551B64E0E5CAF96B4 /* SpeciesViewModel.swift */; };
+		D7F1D39CFD06DE722994100F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CC0DF8213A56BF8469F27 /* MapView.swift */; };
+		F475E560BF48716463766915 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D45584C596166E123A7C72 /* SearchBarView.swift */; };
+		FB4ABC2FCE3E1D91ED4F0CE0 /* BirdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C1BE5C6D3D57F8C92521E /* BirdCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouTravelingPromptView.swift; sourceTree = "<group>"; };
-		071EBFF35E1B85705554C627 /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
-		0B79DC3E44614762374E1484 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
-		140785BDCFCE4565A3525209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		21F4B1D228B31C9323F70690 /* PDFExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFExportService.swift; sourceTree = "<group>"; };
-		246AADB5E59EDC581E467542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		27E963923257D6F2983FF7FA /* FlightTrackerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTrackerService.swift; sourceTree = "<group>"; };
-		397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2Estimator.swift; sourceTree = "<group>"; };
-		4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTemplateCardView.swift; sourceTree = "<group>"; };
-		4C5155EAAB4C6323F4FE3E61 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		4ED7709C7BD8D2323B78D37B /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
-		53D86F652262DA7026FB6D03 /* SubscriptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsView.swift; sourceTree = "<group>"; };
-		55395AE5A3EA83C7975254F7 /* PerchR12R20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerchR12R20.swift; sourceTree = "<group>"; };
-		57D930460BDFCD3421AB028E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		5F9E8CBC8C80D5DE5148AC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateStore.swift; sourceTree = "<group>"; };
-		7180D1F5DE37968ADDFD80B4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		78818E05940FFBF3217C7AA2 /* TripTemplatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTemplatesView.swift; sourceTree = "<group>"; };
-		83806C51C7FF96A14D405117 /* TravelStreaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelStreaksView.swift; sourceTree = "<group>"; };
-		865AC6D83A486D087B22B2B5 /* TripTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTemplate.swift; sourceTree = "<group>"; };
-		8FE376BA0C52C9FD1332BC67 /* PricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingView.swift; sourceTree = "<group>"; };
-		A8D12490AFD56DBFAA859A16 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		ABFB0F0AAA121A9595AB15F9 /* MultiTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTripView.swift; sourceTree = "<group>"; };
-		AC05DA3F819AAF8E839BF063 /* CrossDeviceSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossDeviceSyncService.swift; sourceTree = "<group>"; };
-		B86C8E61910AD4F289432584 /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
-		CA57612FFE2B174530BD42CE /* TripDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDiaryView.swift; sourceTree = "<group>"; };
-		CD209C26A6995661E05F8CAA /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		D12799A47C1915EC77F5114B /* StartTripInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTripInfoView.swift; sourceTree = "<group>"; };
-		D374795D01E9C9B148079A1A /* AErrorStatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AErrorStatesView.swift; sourceTree = "<group>"; };
+		1187FC2A04B4D852BE84AF6D /* LifeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeListView.swift; sourceTree = "<group>"; };
+		28E6540867C6401F8DF08F76 /* LifeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeListViewModel.swift; sourceTree = "<group>"; };
+		30D45584C596166E123A7C72 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		37532DE551B64E0E5CAF96B4 /* SpeciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewModel.swift; sourceTree = "<group>"; };
+		3ACE2850954D5E020A948A9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		464C0A37D8FCFF7F1A946B92 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		54996F15AAAE69FAC6E2C548 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5D08DDF8430E489F3AC420C8 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		79934F4A2517980D17272DC5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A273FDF288DDD755E9D97E33 /* PerchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerchApp.swift; sourceTree = "<group>"; };
+		A29B0F28B575365A86A10925 /* FilterChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChipView.swift; sourceTree = "<group>"; };
+		A33C1BE5C6D3D57F8C92521E /* BirdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCardView.swift; sourceTree = "<group>"; };
+		BBDB49AE17603B25E6F1168F /* SpeciesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRowView.swift; sourceTree = "<group>"; };
+		C0D5083ED2EA9CA77CD69447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2EF211001FE68571C4B8CE1 /* BirdSightingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSightingsView.swift; sourceTree = "<group>"; };
+		C546DB86868F13B34E0D21FF /* SpeciesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesDetailView.swift; sourceTree = "<group>"; };
+		C81CC0DF8213A56BF8469F27 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CCE7F4A19505D3B665B3A097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CDC5808841C22C7A032B3919 /* SpeciesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesDataService.swift; sourceTree = "<group>"; };
 		D41D4D3B908363F711572982 /* Perch.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Perch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D428344B2A0972E70C3F755D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		D7EBC686DE0611D404E0A900 /* CrossDeviceSyncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossDeviceSyncView.swift; sourceTree = "<group>"; };
-		D960343B9187DC308C73FCF7 /* DeepTravelAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepTravelAnalysisView.swift; sourceTree = "<group>"; };
-		DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripComparisonView.swift; sourceTree = "<group>"; };
-		DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostVisitedCitiesView.swift; sourceTree = "<group>"; };
-		E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetectionManager.swift; sourceTree = "<group>"; };
-		E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2BreakdownChartView.swift; sourceTree = "<group>"; };
-		EAC2F322560F9C955BF05810 /* DeepTravelAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepTravelAnalysisService.swift; sourceTree = "<group>"; };
-		F0785397196E09AFAC2383CB /* PerchR12R20Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerchR12R20Service.swift; sourceTree = "<group>"; };
-		FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInsightsService.swift; sourceTree = "<group>"; };
-		FC5BBD04AC583769A3D2ECA0 /* PerchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerchApp.swift; sourceTree = "<group>"; };
-		AE1F3C2A12345678001122334 /* PackingListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListStore.swift; sourceTree = "<group>"; };
-		AE2F3C2A12345678001122335 /* PackingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingList.swift; sourceTree = "<group>"; };
-		AE3F3C2A12345678001122336 /* PackingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListView.swift; sourceTree = "<group>"; };
-		AE4F3C2A12345678001122337 /* PackingListHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListHomeView.swift; sourceTree = "<group>"; };
-
-		AF1F3C2A12345678001122340 /* PlannedTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedTripsView.swift; sourceTree = "<group>"; };
-		AF2F3C2A12345678001122341 /* PlannedTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedTrip.swift; sourceTree = "<group>"; };
-
+		FB331BED5B021DDE8ACC5734 /* AddSightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSightingView.swift; sourceTree = "<group>"; };
+		FE0C3F290C11C016DE591A78 /* SightingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		599C95ED543616392CB25279 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A05090E84B7CD15E07DBDE0B /* SQLite in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		039CA132CFD94CAB89F2BF1D /* Services */ = {
+		1D31CC55A36EE36E48786280 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				397F19597C6345BBE1D8ACD4 /* CO2Estimator.swift */,
-				B86C8E61910AD4F289432584 /* CommunityService.swift */,
-				AC05DA3F819AAF8E839BF063 /* CrossDeviceSyncService.swift */,
-				EAC2F322560F9C955BF05810 /* DeepTravelAnalysisService.swift */,
-				27E963923257D6F2983FF7FA /* FlightTrackerService.swift */,
-				D428344B2A0972E70C3F755D /* LocationService.swift */,
-				21F4B1D228B31C9323F70690 /* PDFExportService.swift */,
-				F0785397196E09AFAC2383CB /* PerchR12R20Service.swift */,
-				A8D12490AFD56DBFAA859A16 /* SampleData.swift */,
-				69E928DBBC49735AE36BF5C0 /* TemplateStore.swift */,
-				E034482093714AB37B9B45A8 /* TravelDetectionManager.swift */,
-				FC1076DF1FE4970DA5EAE00F /* TravelInsightsService.swift */,
-				071EBFF35E1B85705554C627 /* TripStore.swift */,
-				AE1F3C2A12345678001122334 /* PackingListStore.swift */,
-
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		147D4C40D8E79427AA9F17F4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D374795D01E9C9B148079A1A /* AErrorStatesView.swift */,
-				0618037B1C77F0AB089F1388 /* AreYouTravelingPromptView.swift */,
-				E45FFF08D5B8959326073FE5 /* CO2BreakdownChartView.swift */,
-				4ED7709C7BD8D2323B78D37B /* CommunityView.swift */,
-				140785BDCFCE4565A3525209 /* ContentView.swift */,
-				D7EBC686DE0611D404E0A900 /* CrossDeviceSyncView.swift */,
-				D960343B9187DC308C73FCF7 /* DeepTravelAnalysisView.swift */,
-				DB2F6EE8D309B35DEF03F00C /* MostVisitedCitiesView.swift */,
-				AE3F3C2A12345678001122336 /* PackingListView.swift */,
-				AE4F3C2A12345678001122337 /* PackingListHomeView.swift */,
-				AF1F3C2A12345678001122340 /* PlannedTripsView.swift */,
-
-				ABFB0F0AAA121A9595AB15F9 /* MultiTripView.swift */,
-				57D930460BDFCD3421AB028E /* OnboardingView.swift */,
-				8FE376BA0C52C9FD1332BC67 /* PricingView.swift */,
-				4C5155EAAB4C6323F4FE3E61 /* SettingsView.swift */,
-				D12799A47C1915EC77F5114B /* StartTripInfoView.swift */,
-				53D86F652262DA7026FB6D03 /* SubscriptionsView.swift */,
-				83806C51C7FF96A14D405117 /* TravelStreaksView.swift */,
-				DA2A2B8CCCEF45689F709F9D /* TripComparisonView.swift */,
-				0B79DC3E44614762374E1484 /* TripDetailView.swift */,
-				CA57612FFE2B174530BD42CE /* TripDiaryView.swift */,
-				4AFC6806CC1E9FA3823601EC /* TripTemplateCardView.swift */,
-				78818E05940FFBF3217C7AA2 /* TripTemplatesView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		305756D7F50C46FAA8521AFE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				55395AE5A3EA83C7975254F7 /* PerchR12R20.swift */,
-				CD209C26A6995661E05F8CAA /* Trip.swift */,
-				865AC6D83A486D087B22B2B5 /* TripTemplate.swift */,
-				AE2F3C2A12345678001122335 /* PackingList.swift */,
-				AF2F3C2A12345678001122341 /* PlannedTrip.swift */,
-
+				464C0A37D8FCFF7F1A946B92 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3FEF4DB920A69CEA9D73DFA8 /* Sources */ = {
+		2C6F5851A6B9652C9F6BF58E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EFF3B6B274C8B44A57313531 /* App */,
-				305756D7F50C46FAA8521AFE /* Models */,
-				039CA132CFD94CAB89F2BF1D /* Services */,
-				147D4C40D8E79427AA9F17F4 /* Views */,
+				C0D5083ED2EA9CA77CD69447 /* Assets.xcassets */,
 			);
-			name = Sources;
-			path = Perch/Sources;
-			sourceTree = "<group>";
-		};
-		474ABDFE91153055DD6DB779 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5F9E8CBC8C80D5DE5148AC46 /* Assets.xcassets */,
-				246AADB5E59EDC581E467542 /* Info.plist */,
-			);
-			name = Resources;
-			path = Perch/Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5604ACE44E439FA92A920531 /* Products */ = {
@@ -217,20 +79,78 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		781A9BD3DFD468DC020677DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB331BED5B021DDE8ACC5734 /* AddSightingView.swift */,
+				C2EF211001FE68571C4B8CE1 /* BirdSightingsView.swift */,
+				3ACE2850954D5E020A948A9C /* ContentView.swift */,
+				79934F4A2517980D17272DC5 /* HomeView.swift */,
+				1187FC2A04B4D852BE84AF6D /* LifeListView.swift */,
+				C81CC0DF8213A56BF8469F27 /* MapView.swift */,
+				C546DB86868F13B34E0D21FF /* SpeciesDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D505FDF0907DA61CBD037A3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				28E6540867C6401F8DF08F76 /* LifeListViewModel.swift */,
+				FE0C3F290C11C016DE591A78 /* SightingsViewModel.swift */,
+				37532DE551B64E0E5CAF96B4 /* SpeciesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AC54EC53541D72D45C513D46 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A33C1BE5C6D3D57F8C92521E /* BirdCardView.swift */,
+				A29B0F28B575365A86A10925 /* FilterChipView.swift */,
+				5D08DDF8430E489F3AC420C8 /* ProgressRingView.swift */,
+				30D45584C596166E123A7C72 /* SearchBarView.swift */,
+				BBDB49AE17603B25E6F1168F /* SpeciesRowView.swift */,
+				54996F15AAAE69FAC6E2C548 /* Theme.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D85CA7F938722E5036F36D7D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDC5808841C22C7A032B3919 /* SpeciesDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E2FE76835BB9FBCADB65C38C = {
 			isa = PBXGroup;
 			children = (
-				474ABDFE91153055DD6DB779 /* Resources */,
-				3FEF4DB920A69CEA9D73DFA8 /* Sources */,
+				E32E753CE6364804D2CF49B3 /* Perch */,
 				5604ACE44E439FA92A920531 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EFF3B6B274C8B44A57313531 /* App */ = {
+		E32E753CE6364804D2CF49B3 /* Perch */ = {
 			isa = PBXGroup;
 			children = (
-				FC5BBD04AC583769A3D2ECA0 /* PerchApp.swift */,
-				7180D1F5DE37968ADDFD80B4 /* Theme.swift */,
+				CCE7F4A19505D3B665B3A097 /* Info.plist */,
+				EEC16C9E619B957A56177B83 /* App */,
+				AC54EC53541D72D45C513D46 /* Components */,
+				1D31CC55A36EE36E48786280 /* Models */,
+				2C6F5851A6B9652C9F6BF58E /* Resources */,
+				D85CA7F938722E5036F36D7D /* Services */,
+				7D505FDF0907DA61CBD037A3 /* ViewModels */,
+				781A9BD3DFD468DC020677DE /* Views */,
+			);
+			path = Perch;
+			sourceTree = "<group>";
+		};
+		EEC16C9E619B957A56177B83 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A273FDF288DDD755E9D97E33 /* PerchApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -244,16 +164,12 @@
 			buildPhases = (
 				D1A1C77C580B3DEA6A464FB2 /* Sources */,
 				2C8B29F9A60922A813480135 /* Resources */,
-				599C95ED543616392CB25279 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Perch;
-			packageProductDependencies = (
-				07BAF518E608435A38F6CB8B /* SQLite */,
-			);
 			productName = Perch;
 			productReference = D41D4D3B908363F711572982 /* Perch.app */;
 			productType = "com.apple.product-type.application";
@@ -265,11 +181,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					45DC64F4606392864F14C513 = {
-						DevelopmentTeam = "";
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -282,9 +197,6 @@
 				en,
 			);
 			mainGroup = E2FE76835BB9FBCADB65C38C;
-			packageReferences = (
-				AA1FE245DCB90AD627D7308F /* XCRemoteSwiftPackageReference "SQLite.swift" */,
-			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -298,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713152E6ED795FD01191A7FF /* Assets.xcassets in Resources */,
+				43419DBBFAA9A7474A23716E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,51 +221,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12BE91030EBC76002D23F336 /* AErrorStatesView.swift in Sources */,
-				B2ED9585D8893E87AA2F2E95 /* AreYouTravelingPromptView.swift in Sources */,
-				5A05394609CF5C22D1598AB3 /* CO2BreakdownChartView.swift in Sources */,
-				F943B7C613E03FFD9FA3D77D /* CO2Estimator.swift in Sources */,
-				F9A955CEB7C0ECBED1D4D459 /* CommunityService.swift in Sources */,
-				45BAACF0F3C3284A865BFB71 /* CommunityView.swift in Sources */,
-				0F6CEBC3A92F003599305527 /* ContentView.swift in Sources */,
-				7BA24261CE5EB692A275142B /* CrossDeviceSyncService.swift in Sources */,
-				7B278D70A4235636E9D56746 /* CrossDeviceSyncView.swift in Sources */,
-				CC358F3F30A312C55E8930F1 /* DeepTravelAnalysisService.swift in Sources */,
-				6EB088D6D49014E35F8B0DAA /* DeepTravelAnalysisView.swift in Sources */,
-				65FAF231F4745D15368B1CEA /* FlightTrackerService.swift in Sources */,
-				F87D96C1748650047B37E77C /* LocationService.swift in Sources */,
-				5C0117D8B0BD275E67EF4482 /* MostVisitedCitiesView.swift in Sources */,
-				E81B78FFE638B45B43CF66BF /* MultiTripView.swift in Sources */,
-				7F070433B11120EB3B10C1D1 /* OnboardingView.swift in Sources */,
-				2F4EE32D226AA5066FB96495 /* PDFExportService.swift in Sources */,
-				D30AEDA5D893DFB9F4B66A50 /* PerchApp.swift in Sources */,
-				D479F496DBBBE1F84C022632 /* PerchR12R20.swift in Sources */,
-				4D7DCC3193D552C52CBD9E16 /* PerchR12R20Service.swift in Sources */,
-				5E71970442CD4A50368476E4 /* PricingView.swift in Sources */,
-				E47C1A3C0636CB757F1020E9 /* SampleData.swift in Sources */,
-				E61674E2751D4E2A87F7EF20 /* SettingsView.swift in Sources */,
-				0148102DE81283AC055F8B75 /* StartTripInfoView.swift in Sources */,
-				DF442B43C75BDB3DE525A19A /* SubscriptionsView.swift in Sources */,
-				DFA053AD1002F4D15CE16388 /* TemplateStore.swift in Sources */,
-				CF2068124BC0352981D1ABDE /* Theme.swift in Sources */,
-				AC5C50D5246BB7747C6DCF20 /* TravelDetectionManager.swift in Sources */,
-				549B61A7A33A602AB2C796A2 /* TravelInsightsService.swift in Sources */,
-				BA7CB1F9D74C1668DE94105F /* TravelStreaksView.swift in Sources */,
-				3A57E302CDD878A0E233204F /* Trip.swift in Sources */,
-				B68F87D44CF1975308E03D6D /* TripComparisonView.swift in Sources */,
-				A79E7A21D50FC5F65E500085 /* TripDetailView.swift in Sources */,
-				A88908FEAE9A390E6C6555A6 /* TripDiaryView.swift in Sources */,
-				B54C4BA35AE3E382135FC36C /* TripStore.swift in Sources */,
-				AE5F3C2A12345678001122338 /* PackingListStore.swift in Sources */,
-				AE6F3C2A12345678001122339 /* PackingList.swift in Sources */,
-				AE7F3C2A1234567800112233A /* PackingListView.swift in Sources */,
-				AE8F3C2A1234567800112233B /* PackingListHomeView.swift in Sources */,
-				AF3F3C2A12345678001122342 /* PlannedTripsView.swift in Sources */,
-				AF4F3C2A12345678001122343 /* PlannedTrip.swift in Sources */,
-
-				28B4F682D56F7787503745D2 /* TripTemplate.swift in Sources */,
-				52230FEB66110A31361A27D0 /* TripTemplateCardView.swift in Sources */,
-				98FDF67656AFD6EB08DC0140 /* TripTemplatesView.swift in Sources */,
+				9DB6B47E758C87321B5E0905 /* AddSightingView.swift in Sources */,
+				FB4ABC2FCE3E1D91ED4F0CE0 /* BirdCardView.swift in Sources */,
+				04524923AD4053DDE1181F04 /* BirdSightingsView.swift in Sources */,
+				113F7F55BE6960E89A601371 /* ContentView.swift in Sources */,
+				525C3C1BB2F334229A4E7638 /* FilterChipView.swift in Sources */,
+				7CF665310B69550D0DFA8A52 /* HomeView.swift in Sources */,
+				B32F53C9B78222A792378222 /* LifeListView.swift in Sources */,
+				B0F19B8B01E2794E1AC6F8FF /* LifeListViewModel.swift in Sources */,
+				D7F1D39CFD06DE722994100F /* MapView.swift in Sources */,
+				4D8AC9E657EF9C6A78B0AA50 /* Models.swift in Sources */,
+				19011216E650F7E6E16BFC6B /* PerchApp.swift in Sources */,
+				19D73C9110902F6231B5710D /* ProgressRingView.swift in Sources */,
+				F475E560BF48716463766915 /* SearchBarView.swift in Sources */,
+				22EB8B24268F513227BD3092 /* SightingsViewModel.swift in Sources */,
+				696936152FFEDF43F8E55775 /* SpeciesDataService.swift in Sources */,
+				949BE79B70359F58826CC44C /* SpeciesDetailView.swift in Sources */,
+				5BB26D1D0C0E958B001928E0 /* SpeciesRowView.swift in Sources */,
+				C8956E9AC696A23E082CEE24 /* SpeciesViewModel.swift in Sources */,
+				4B056EB376861ABB13DD3F10 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +250,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,11 +279,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -409,18 +291,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Perch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -428,14 +306,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Perch/Resources/Info.plist;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				INFOPLIST_FILE = Perch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.perch.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tommaso.perch.ios;
+				PRODUCT_NAME = Perch;
 				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,7 +328,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -474,11 +357,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -495,10 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Perch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -506,8 +383,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -515,14 +391,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Perch/Resources/Info.plist;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				INFOPLIST_FILE = Perch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.perch.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tommaso.perch.ios;
+				PRODUCT_NAME = Perch;
 				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -549,25 +431,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AA1FE245DCB90AD627D7308F /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.15.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		07BAF518E608435A38F6CB8B /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA1FE245DCB90AD627D7308F /* XCRemoteSwiftPackageReference "SQLite.swift" */;
-			productName = SQLite;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78904F42286EE3E52ED2700B /* Project object */;
 }
