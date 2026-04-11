@@ -6,6 +6,7 @@ struct CO2BreakdownChartView: View {
     let year: Int
 
     @State private var selectedMode: TransportModeData?
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -53,6 +54,8 @@ struct CO2BreakdownChartView: View {
                 }
                 .chartLegend(.hidden)
                 .frame(height: 180)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(accessibilitySummary)
 
                 // Center label
                 VStack(spacing: 2) {
@@ -92,26 +95,30 @@ struct CO2BreakdownChartView: View {
                         isSelected: selectedMode?.mode == item.mode
                     )
                     .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.2)) {
-                            if selectedMode?.mode == item.mode {
-                                selectedMode = nil
-                            } else {
-                                selectedMode = item
-                            }
+                        if selectedMode?.mode == item.mode {
+                            selectedMode = nil
+                        } else {
+                            selectedMode = item
                         }
                     }
                 }
             }
+            .animation(reduceMotion ? .none : .easeInOut(duration: 0.2), value: selectedMode)
         }
         .perchCard()
+    }
+
+    private var accessibilitySummary: String {
+        let parts = chartData.map { "\($0.label): \(Int($0.percent * 100))%" }
+        return "CO₂ breakdown. Total: \(breakdown.formattedTotal). " + parts.joined(separator: ", ")
     }
 
     private var chartData: [TransportModeData] {
         [
             TransportModeData(mode: "flight", label: "Flight", kg: breakdown.flightKg, percent: breakdown.flightPercent, color: Theme.terracotta),
-            TransportModeData(mode: "car", label: "Car", kg: breakdown.carKg, percent: breakdown.carPercent, color: Color(hex: "f59e0b")),
+            TransportModeData(mode: "car", label: "Car", kg: breakdown.carKg, percent: breakdown.carPercent, color: Theme.amber),
             TransportModeData(mode: "train", label: "Train", kg: breakdown.trainKg, percent: breakdown.trainPercent, color: Theme.sage),
-            TransportModeData(mode: "bus", label: "Bus", kg: breakdown.busKg, percent: breakdown.busPercent, color: Color(hex: "60a5fa"))
+            TransportModeData(mode: "bus", label: "Bus", kg: breakdown.busKg, percent: breakdown.busPercent, color: Theme.blue)
         ].filter { $0.kg > 0 }
     }
 
@@ -242,9 +249,9 @@ struct CO2ComparisonView: View {
 
     private var co2Color: Color {
         if comparison.yourCO2 < comparison.avgCO2 * 0.7 { return Theme.sage }
-        if comparison.yourCO2 < comparison.avgCO2 { return Color(hex: "84cc16") }
-        if comparison.yourCO2 <= comparison.avgCO2 * 1.3 { return Color(hex: "f59e0b") }
-        return Color(hex: "ef4444")
+        if comparison.yourCO2 < comparison.avgCO2 { return Theme.lime }
+        if comparison.yourCO2 <= comparison.avgCO2 * 1.3 { return Theme.amber }
+        return Theme.red
     }
 
     private func formatCO2(_ kg: Double) -> String {
@@ -345,11 +352,11 @@ struct CO2GaugeView: View {
         if yourCO2 < avgCO2 * 0.7 {
             return LinearGradient(colors: [Theme.sage, Theme.sage], startPoint: .leading, endPoint: .trailing)
         } else if yourCO2 < avgCO2 {
-            return LinearGradient(colors: [Theme.sage, Color(hex: "84cc16")], startPoint: .leading, endPoint: .trailing)
+            return LinearGradient(colors: [Theme.sage, Theme.lime], startPoint: .leading, endPoint: .trailing)
         } else if yourCO2 <= avgCO2 * 1.3 {
-            return LinearGradient(colors: [Color(hex: "f59e0b"), Color(hex: "fbbf24")], startPoint: .leading, endPoint: .trailing)
+            return LinearGradient(colors: [Theme.amber, Theme.yellow], startPoint: .leading, endPoint: .trailing)
         } else {
-            return LinearGradient(colors: [Color(hex: "ef4444"), Color(hex: "b91c1c")], startPoint: .leading, endPoint: .trailing)
+            return LinearGradient(colors: [Theme.red, Theme.darkRed], startPoint: .leading, endPoint: .trailing)
         }
     }
 }

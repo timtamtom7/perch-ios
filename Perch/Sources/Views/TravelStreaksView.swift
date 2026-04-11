@@ -33,7 +33,7 @@ struct TravelStreaksView: View {
                     icon: "trophy.fill",
                     value: "\(streak.consecutiveMonthsWithTravel)",
                     label: "Streak",
-                    color: Color(hex: "fbbf24")
+                    color: Theme.yellow
                 )
             }
 
@@ -69,7 +69,7 @@ struct TravelStreaksView: View {
                         icon: "star.fill",
                         label: "Longest trip",
                         value: "\(streak.longestTripDays) days",
-                        color: Color(hex: "fbbf24")
+                        color: Theme.yellow
                     )
                 }
             }

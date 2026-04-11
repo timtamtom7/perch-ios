@@ -4,6 +4,7 @@ struct PackingListView: View {
     let packingList: PackingList
     @EnvironmentObject var packingListStore: PackingListStore
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var showingAddItem = false
     @State private var showingDeleteAlert = false
     @State private var showingResetAlert = false
@@ -143,12 +144,10 @@ struct PackingListView: View {
         VStack(spacing: 0) {
             // Category header
             Button {
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    if expandedCategories.contains(category) {
-                        expandedCategories.remove(category)
-                    } else {
-                        expandedCategories.insert(category)
-                    }
+                if expandedCategories.contains(category) {
+                    expandedCategories.remove(category)
+                } else {
+                    expandedCategories.insert(category)
                 }
             } label: {
                 HStack(spacing: 10) {
@@ -206,6 +205,7 @@ struct PackingListView: View {
         }
         .cornerRadius(12)
         .padding(.bottom, 8)
+        .animation(reduceMotion ? .none : .easeInOut(duration: 0.2), value: expandedCategories)
     }
 
     private var addItemButton: some View {

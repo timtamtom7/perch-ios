@@ -166,7 +166,7 @@ struct ComparisonCard: View {
 
     private var diffColor: Color {
         if abs(diffValue) < 0.5 { return Theme.textSecondary }
-        return diffValue > 0 ? Color(hex: "ef4444") : Theme.sage
+        return diffValue > 0 ? Theme.red : Theme.sage
     }
 }
 
@@ -203,7 +203,7 @@ struct VerdictCard: View {
     private var verdictColor: Color {
         let score = verdictScore
         if score > 0.3 { return Theme.terracotta }
-        if score > -0.3 { return Color(hex: "f59e0b") }
+        if score > -0.3 { return Theme.amber }
         return Theme.sage
     }
 

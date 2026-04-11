@@ -101,6 +101,7 @@ struct CityPodiumCard: View {
                     .padding(.bottom, 8)
             }
         )
+        .accessibilityLabel("Rank \(ranking.rank): \(ranking.city), visited \(ranking.visitCount) times")
     }
 
     private var medalEmoji: String {
@@ -115,8 +116,8 @@ struct CityPodiumCard: View {
     private var podiumColor: Color {
         switch ranking.rank {
         case 1: return Theme.terracotta
-        case 2: return Color(hex: "9ca3af")
-        case 3: return Color(hex: "b45309").opacity(0.6)
+        case 2: return Theme.graySecondary
+        case 3: return Theme.bronze.opacity(0.6)
         default: return Theme.surfaceElevated
         }
     }
@@ -138,7 +139,7 @@ struct CityRankingRow: View {
     var body: some View {
         VStack(spacing: 0) {
             Button {
-                withAnimation { isExpanded.toggle() }
+                isExpanded.toggle()
             } label: {
                 HStack(spacing: 12) {
                     // Rank
@@ -180,6 +181,7 @@ struct CityRankingRow: View {
                 .padding(.vertical, 10)
                 .padding(.horizontal, 12)
             }
+            .accessibilityLabel("\(ranking.city), rank \(ranking.rank), \(ranking.visitCount) visits, \(ranking.totalDays) days total. \(isExpanded ? "Expanded" : "Collapsed")")
 
             if isExpanded {
                 VStack(alignment: .leading, spacing: 8) {
@@ -195,21 +197,20 @@ struct CityRankingRow: View {
         }
         .background(Theme.surface)
         .cornerRadius(12)
+        .animation(.easeInOut(duration: 0.2), value: isExpanded)
     }
 
     private var rankColor: Color {
         switch ranking.rank {
         case 1: return Theme.terracotta
-        case 2: return Color(hex: "9ca3af")
-        case 3: return Color(hex: "b45309")
+        case 2: return Theme.graySecondary
+        case 3: return Theme.bronze
         default: return Theme.textSecondary
         }
     }
 
     private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM yyyy"
-        return formatter.string(from: date)
+        DateFormatters.monthYear.string(from: date)
     }
 }
 

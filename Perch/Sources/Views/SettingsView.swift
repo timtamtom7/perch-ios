@@ -103,6 +103,7 @@ struct SettingsView: View {
                                 .foregroundColor(Theme.textPrimary)
                         }
                     }
+                    .accessibilityLabel("How Perch works")
                     .listRowBackground(Theme.surface)
 
                     HStack {
@@ -116,6 +117,7 @@ struct SettingsView: View {
                             .font(.system(size: 13))
                             .foregroundColor(Theme.textSecondary)
                     }
+                    .accessibilityLabel("Location permissions: \(locationPermissionStatus)")
                     .listRowBackground(Theme.surface)
                 } header: {
                     Text("Help")

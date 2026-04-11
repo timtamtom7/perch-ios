@@ -1,0 +1,23 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripTemplateCardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplateCardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplateCardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplateCardView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplateCardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplateCardView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripTemplatesView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplatesView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplatesView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplatesView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplatesView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripTemplatesView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps"
+  }
+}

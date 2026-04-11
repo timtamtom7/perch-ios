@@ -32,7 +32,7 @@ struct OnboardingView: View {
 
                     if currentPage < 3 {
                         Button {
-                            withAnimation { currentPage += 1 }
+                            currentPage += 1
                         } label: {
                             Text("Continue")
                         }
@@ -49,7 +49,7 @@ struct OnboardingView: View {
 
                     if currentPage > 0 {
                         Button {
-                            withAnimation { currentPage -= 1 }
+                            currentPage -= 1
                         } label: {
                             Text("Back")
                                 .font(.system(size: 15))
@@ -80,7 +80,7 @@ struct OnboardingScreen1: View {
         VStack(spacing: 0) {
             Spacer()
 
-            // Abstract world map composition
+            // Abstract world map composition (decorative — text below provides context)
             ZStack {
                 // Globe arc
                 Circle()
@@ -131,6 +131,7 @@ struct OnboardingScreen1: View {
                 // Center pin (larger, accent)
                 MapPinGraphic(size: 18, opacity: 1.0)
             }
+            .accessibilityHidden(true)
 
             Spacer()
 
@@ -198,6 +199,7 @@ struct OnboardingScreen2: View {
                     .frame(width: 240, height: 240)
                     .rotationEffect(.degrees(-20))
             }
+            .accessibilityHidden(true)
 
             Spacer()
 
@@ -276,6 +278,7 @@ struct OnboardingScreen3: View {
                         .foregroundColor(Theme.textSecondary.opacity(0.6))
                 }
             }
+            .accessibilityHidden(true)
 
             Spacer()
 

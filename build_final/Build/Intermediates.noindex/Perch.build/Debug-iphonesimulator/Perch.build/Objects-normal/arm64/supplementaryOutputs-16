@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/SampleData.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SampleData.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SampleData.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SampleData.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SampleData.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SampleData.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/PricingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PricingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PricingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PricingView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PricingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PricingView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/SettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SettingsView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/SettingsView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/StartTripInfoView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/StartTripInfoView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/StartTripInfoView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/StartTripInfoView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/StartTripInfoView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/StartTripInfoView.swiftdeps"
+  }
+}

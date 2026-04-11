@@ -527,9 +527,7 @@ struct PlannedTripDetailView: View {
     }
 
     private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d"
-        return formatter.string(from: date)
+        DateFormatters.shortMonthDay.string(from: date)
     }
 }
 
@@ -761,15 +759,15 @@ actor WeatherService {
         let decoder = JSONDecoder()
         let result = try decoder.decode(OpenMeteoResponse.self, from: data)
 
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withFullDate]
+
         let days = zip(result.daily.time, result.daily.temperature_2m_max).enumerated().map { index, pair in
             let (dateStr, high) = pair
-            let low = result.daily.temperature_2m_min[index]
-            let code = result.daily.weathercode[index]
+            let low = result.daily.temperature_2m_min[safe: index] ?? high
+            let code = result.daily.weathercode[safe: index] ?? 0
 
-            let formatter = ISO8601DateFormatter()
-            formatter.formatOptions = [.withFullDate]
             let date = formatter.date(from: dateStr) ?? Date()
-
             let (icon, description) = weatherCodeToCondition(code)
 
             return WeatherDay(

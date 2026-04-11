@@ -253,7 +253,7 @@ struct ExplorerPlanCard: View {
                             .foregroundColor(Theme.sage)
                         Image(systemName: "crown.fill")
                             .font(.system(size: 14))
-                            .foregroundColor(Color(hex: "c9a84c"))
+                            .foregroundColor(Theme.gold)
                     }
                     Text("$9.99 / month")
                         .font(.system(size: 14))
@@ -304,7 +304,7 @@ struct ExplorerPlanCard: View {
         .cornerRadius(16)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(isSelected ? Theme.sage : Color(hex: "c9a84c").opacity(0.3), lineWidth: isSelected ? 2 : 1.5)
+                .stroke(isSelected ? Theme.sage : Theme.gold.opacity(0.3), lineWidth: isSelected ? 2 : 1.5)
         )
     }
 }

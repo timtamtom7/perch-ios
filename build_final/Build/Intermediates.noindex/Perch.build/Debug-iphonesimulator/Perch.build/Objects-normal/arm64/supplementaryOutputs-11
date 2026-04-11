@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/CO2Estimator.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2Estimator.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2Estimator.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2Estimator.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2Estimator.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2Estimator.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/AErrorStatesView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AErrorStatesView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AErrorStatesView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AErrorStatesView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AErrorStatesView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AErrorStatesView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/AreYouTravelingPromptView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/AreYouTravelingPromptView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/CO2BreakdownChartView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CO2BreakdownChartView.swiftdeps"
+  }
+}

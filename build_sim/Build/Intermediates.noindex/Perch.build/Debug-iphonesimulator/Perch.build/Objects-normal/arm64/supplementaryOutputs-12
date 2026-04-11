@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/CommunityService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/CrossDeviceSyncService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/CommunityView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CommunityView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/ContentView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/ContentView.swiftdeps"
+  }
+}

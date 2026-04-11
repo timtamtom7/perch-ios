@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/DeepTravelAnalysisService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/FlightTrackerService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/FlightTrackerService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/FlightTrackerService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/FlightTrackerService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/FlightTrackerService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/FlightTrackerService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/CrossDeviceSyncView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/CrossDeviceSyncView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/DeepTravelAnalysisView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/DeepTravelAnalysisView.swiftdeps"
+  }
+}

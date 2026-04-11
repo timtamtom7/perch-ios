@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/App/PerchApp.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchApp.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchApp.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchApp.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchApp.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchApp.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Models/PerchR12R20.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/PDFExportService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PDFExportService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PDFExportService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PDFExportService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PDFExportService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PDFExportService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/PerchR12R20Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20Service.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/PerchR12R20Service.swiftdeps"
+  }
+}

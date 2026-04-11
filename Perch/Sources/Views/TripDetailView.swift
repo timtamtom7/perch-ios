@@ -344,9 +344,7 @@ struct CityRow: View {
     }
 
     private var formattedDate: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d, yyyy"
-        return formatter.string(from: visit.arrivalDate)
+        DateFormatters.fullDate.string(from: visit.arrivalDate)
     }
 
     private func formatDuration(_ interval: TimeInterval) -> String {

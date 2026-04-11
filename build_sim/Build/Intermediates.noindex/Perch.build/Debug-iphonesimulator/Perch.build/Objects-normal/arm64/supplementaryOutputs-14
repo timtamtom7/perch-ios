@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/LocationService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/LocationService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/LocationService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/LocationService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/LocationService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/LocationService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/MostVisitedCitiesView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MostVisitedCitiesView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/MultiTripView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MultiTripView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MultiTripView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MultiTripView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MultiTripView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/MultiTripView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/OnboardingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/OnboardingView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_sim/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/OnboardingView.swiftdeps"
+  }
+}

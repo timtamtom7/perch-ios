@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Models/Trip.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/Trip.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/Trip.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/Trip.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/Trip.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/Trip.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Services/TravelInsightsService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelInsightsService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelInsightsService.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelInsightsService.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelInsightsService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelInsightsService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TravelStreaksView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelStreaksView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelStreaksView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelStreaksView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelStreaksView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TravelStreaksView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/perch-ios/Perch/Sources/Views/TripComparisonView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripComparisonView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripComparisonView.d",
+    "diagnostics" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripComparisonView.dia",
+    "object" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripComparisonView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/perch-ios/build_final/Build/Intermediates.noindex/Perch.build/Debug-iphonesimulator/Perch.build/Objects-normal/arm64/TripComparisonView.swiftdeps"
+  }
+}
